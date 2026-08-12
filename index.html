@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEMECOIN LAB</title>
+<style>
+* { box-sizing:border-box; margin:0; padding:0; }
+body { background:#0d1117; color:#e6edf3; font-family:-apple-system,Segoe UI,Roboto,sans-serif;
+  padding:14px 14px 90px; max-width:900px; margin:0 auto; }
+.hdr { border-bottom:1px solid #21262d; padding-bottom:10px; margin-bottom:12px; }
+.title { font-size:20px; font-weight:700; letter-spacing:1px; }
+.sysline { font-size:12px; color:#8b949e; margin-top:4px; }
+.dot.ok { color:#3fb950; }
+.topnav { margin-top:10px; display:flex; gap:8px; }
+.pill { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:5px 12px; font-size:12px; cursor:pointer; }
+.pill.active { background:#1f6feb; border-color:#1f6feb; }
+h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.sub { font-size:12px; color:#8b949e; margin-bottom:10px; }
+.badge { font-size:10px; padding:2px 6px; border-radius:8px; }
+.badge.live { background:#0d2818; color:#3fb950; }
+.badge.res { background:#2a2410; color:#d29922; }
+.badge.ins { background:#3a0d0d; color:#f85149; }
+.badge.frozen { background:#1b1b1b; color:#8b949e; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
+.card { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; }
+.cname { font-weight:700; font-size:13px; margin-bottom:6px; }
+.crow { font-size:11px; color:#adbac7; line-height:1.5; }
+.ctag { margin-top:8px; font-size:10px; color:#8b949e; border-top:1px dashed #30363d; padding-top:6px; }
+.mom { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; margin-bottom:8px; }
+.mrow { font-size:12px; line-height:1.6; }
+.mlab { font-size:10px; color:#d29922; margin-top:4px; }
+.warn { color:#f85149; }
+.empty { color:#8b949e; font-size:12px; }
+.tab { display:none; }
+.tab.active { display:block; }
+.navbar { position:fixed; bottom:0; left:0; right:0; background:#010409; border-top:1px solid #30363d;
+  display:flex; justify-content:space-around; padding:8px 0; max-width:900px; margin:0 auto; }
+.navbar span { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; }
+.navbar span.active { color:#1f6feb; }
+@media(min-width:760px) {
+  body { max-width:1100px; display:grid; grid-template-columns:160px 1fr; gap:16px; padding-bottom:20px; }
+  .hdr { grid-column:1 / -1; }
+  .navbar { display:none; }
+  .sidebar { display:flex; flex-direction:column; gap:6px; }
+  .sidebar span { font-size:12px; color:#8b949e; cursor:pointer; padding:6px 8px; border-radius:8px; }
+  .sidebar span.active { background:#161b22; color:#1f6feb; }
+}
+</style>
+</head>
+<body>
+
+<header class="hdr">
+  <div class="title">MEMECOIN LAB</div>
+  <div class="sysline"><span class="dot ok">🟢</span> SYSTEM ONLINE &nbsp;·&nbsp; Last scan ? WIB</div>
+  <nav class="topnav">
+    <span class="pill" data-tab="radar">RADAR</span>
+    <span class="pill" data-tab="momentum">RESEARCH</span>
+    <span class="pill" data-tab="outcome">OUTCOME</span>
+  </nav>
+</header>
+<div class="sidebar">
+  <span data-tab="radar" class="active">🔥 RADAR</span>
+  <span data-tab="momentum">⚡️ MOMENTUM</span>
+  <span data-tab="setup">📈 SETUP</span>
+  <span data-tab="security">🛡 SECURITY</span>
+  <span data-tab="outcome">📊 OUTCOME</span>
+</div>
+
+<section id="radar" class="tab">
+  <h2>🔥 RADAR <span class="badge live">🟢 LIVE DATA</span></h2>
+  <div class="sub"> WIB · 3 Candidates</div>
+  <div class="grid">
+  <div class="card">
+    <div class="cname">FOMEOW</div>
+    <div class="crow">$188,238 MC</div>
+    <div class="crow">💧 $30,281</div>
+    <div class="crow">👥 +7.7% holders</div>
+    <div class="ctag">SELECTED — HOLDER RADAR</div>
+  </div>
+
+  <div class="card">
+    <div class="cname">Plumber</div>
+    <div class="crow">$2,803,720 MC</div>
+    <div class="crow">💧 $368,352</div>
+    <div class="crow">👥 +4.4% holders</div>
+    <div class="ctag">SELECTED — HOLDER RADAR</div>
+  </div>
+
+  <div class="card">
+    <div class="cname">BOT</div>
+    <div class="crow">$1,362,570 MC</div>
+    <div class="crow">💧 $131,877</div>
+    <div class="crow">👥 +3.3% holders</div>
+    <div class="ctag">SELECTED — HOLDER RADAR</div>
+  </div></div>
+</section>
+
+<section id="momentum" class="tab">
+  <h2>⚡️ MOMENTUM <span class="badge res">🟡 RESEARCH</span></h2>
+  <div class="sub">observasi momentum · bukan BUY</div>
+  
+  <div class="mom">
+    <div class="cname">FOMEOW</div>
+    <div class="mrow">Holder&nbsp;&nbsp;+7.7%</div>
+    <div class="mrow">TX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+80.3%</div>
+    <div class="mrow">Volume&nbsp;&nbsp;+52.3%</div>
+    <div class="mlab">STABLE (-3.3pp)</div>
+  </div>
+
+  <div class="mom">
+    <div class="cname">Plumber</div>
+    <div class="mrow">Holder&nbsp;&nbsp;+4.4%</div>
+    <div class="mrow">TX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+24.6%</div>
+    <div class="mrow">Volume&nbsp;&nbsp;+18.7%</div>
+    <div class="mlab">DECELERATING (-5.4pp)</div>
+  </div>
+
+  <div class="mom">
+    <div class="cname">BOT</div>
+    <div class="mrow">Holder&nbsp;&nbsp;+3.3%</div>
+    <div class="mrow">TX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+261.0%</div>
+    <div class="mrow">Volume&nbsp;&nbsp;+428.7%</div>
+    <div class="mlab">STABLE (-0.5pp)</div>
+  </div>
+</section>
+
+<section id="setup" class="tab">
+  <h2>📈 PRICE ACTION <span class="badge res">🟡 RESEARCH</span></h2>
+  <div class="sub">visual hypothesis · expandable per setup · N&lt;30 = inconclusive</div>
+  <div class="grid">
+  <div class="card setup">
+    <div class="cname">WICK RECLAIM <span class="badge res">🟡 INCONCLUSIVE</span></div>
+    <div class="crow">CA: 5<br>1H valid: 0<br>4H valid: 0</div>
+  </div>
+  <div class="card setup">
+    <div class="cname">DEEP RETRACE <span class="badge res">🟡 INCONCLUSIVE</span></div>
+    <div class="crow">CA: 24<br>1H valid: 0<br>4H valid: 0</div>
+  </div>
+  <div class="card setup">
+    <div class="cname">PERSISTENT TREND <span class="badge res">🟡 RESEARCH</span></div>
+    <div class="crow">CA: 34<br>outcome: outcome collecting</div>
+  </div>
+  <div class="card setup">
+    <div class="cname">BASE</div>
+    <div class="crow">CA: 69</div>
+  </div></div>
+</section>
+
+<section id="security" class="tab">
+  <h2>🛡 SECURITY RESEARCH <span class="badge frozen">🔒 FROZEN</span></h2>
+  <div class="sub">Research only · Not connected to BUY</div>
+  <div class="grid">
+  <div class="card sec">
+    <div class="cname">FOMEOW</div>
+    <div class="crow">Top10&nbsp;&nbsp;—</div>
+    <div class="crow">Dev/team 0.2%</div>
+    <div class="crow">Rug&nbsp;&nbsp;&nbsp;&nbsp;0.430</div>
+    <div class="crow">Entrap&nbsp;—</div>
+  </div>
+
+  <div class="card sec">
+    <div class="cname">Plumber</div>
+    <div class="crow">Top10&nbsp;&nbsp;—</div>
+    <div class="crow">Dev/team 0.0%</div>
+    <div class="crow">Rug&nbsp;&nbsp;&nbsp;&nbsp;0.050</div>
+    <div class="crow">Entrap&nbsp;—</div>
+  </div>
+
+  <div class="card sec">
+    <div class="cname">BOT</div>
+    <div class="crow">Top10&nbsp;&nbsp;—</div>
+    <div class="crow">Dev/team 0.0%</div>
+    <div class="crow">Rug&nbsp;&nbsp;&nbsp;&nbsp;0.089</div>
+    <div class="crow">Entrap&nbsp;—</div>
+  </div></div>
+</section>
+
+<section id="outcome" class="tab">
+  <h2>📊 24H SCORECARD <span class="badge ins">🔴 INSUFFICIENT SAMPLE</span></h2>
+  <div class="sub">radar selected → 24h outcome</div>
+  <div class="grid">
+    <div class="card">
+      <div class="cname">STATUS</div>
+      <div class="crow">Valid&nbsp;&nbsp;&nbsp;0</div>
+      <div class="crow">Stale&nbsp;&nbsp;&nbsp;0</div>
+      <div class="crow">Dead&nbsp;&nbsp;&nbsp;&nbsp;0</div>
+      <div class="crow">Pending&nbsp;&nbsp;0</div>
+    </div>
+    <div class="card">
+      <div class="cname">RETURN</div>
+      <div class="crow">Median&nbsp;&nbsp;—</div>
+      <div class="crow">Win rate —</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="cname">TOP 5</div><p class='empty'>none</p>
+  </div>
+  <div class="card">
+    <div class="cname">BOTTOM 5</div><p class='empty'>none</p>
+  </div>
+</section>
+<div class="navbar">
+  <span data-tab="radar" class="active">🔥 Radar</span>
+  <span data-tab="momentum">⚡️ Mom</span>
+  <span data-tab="setup">📈 Setup</span>
+  <span data-tab="security">🛡 Sec</span>
+  <span data-tab="outcome">📊 Out</span>
+</div>
+<script>
+function show(t){
+  document.querySelectorAll('.tab').forEach(s=>s.classList.remove('active'));
+  var el=document.getElementById(t); if(el) el.classList.add('active');
+  document.querySelectorAll('[data-tab]').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('[data-tab="'+t+'"]').forEach(s=>s.classList.add('active'));
+}
+document.querySelectorAll('[data-tab]').forEach(s=>s.addEventListener('click',()=>show(s.dataset.tab)));
+show('radar');
+</script>
+</body>
+</html>
