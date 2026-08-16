@@ -9,15 +9,15 @@
 body { background:#0d1117; color:#e6edf3; font-family:-apple-system,Segoe UI,Roboto,sans-serif;
   padding:14px 14px 90px; max-width:900px; margin:0 auto; }
 .hdr { border-bottom:1px solid #21262d; padding-bottom:10px; margin-bottom:12px; }
-.title { font-size:20px; font-weight:700; letter-spacing:1px; }
-.sysline { font-size:12px; color:#8b949e; margin-top:4px; }
+.title { font-size:21px; font-weight:700; letter-spacing:1px; }
+.sysline { font-size:13px; color:#8b949e; margin-top:4px; }
 .dot.ok { color:#3fb950; }
 .topnav { margin-top:10px; display:flex; gap:8px; }
-.pill { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:5px 12px; font-size:12px; cursor:pointer; }
+.pill { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:5px 12px; font-size:13px; cursor:pointer; }
 .pill.active { background:#1f6feb; border-color:#1f6feb; }
-h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-.sub { font-size:12px; color:#8b949e; margin-bottom:10px; }
-.badge { font-size:10px; padding:2px 6px; border-radius:8px; }
+h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.sub { font-size:13px; color:#8b949e; margin-bottom:10px; }
+.badge { font-size:11px; padding:2px 6px; border-radius:8px; }
 .badge.live { background:#0d2818; color:#3fb950; }
 .badge.res { background:#2a2410; color:#d29922; }
 .badge.ins { background:#3a0d0d; color:#f85149; }
@@ -29,16 +29,28 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 .dot.err { color:#f85149; }
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; }
 .card { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; }
-.cname { font-weight:700; font-size:13px; margin-bottom:6px; }
-.crow { font-size:11px; color:#adbac7; line-height:1.5; }
-.ctag { margin-top:8px; font-size:10px; color:#8b949e; border-top:1px dashed #30363d; padding-top:6px; }
+.cname { font-weight:700; font-size:14px; margin-bottom:6px; }
+.crow { font-size:12.5px; color:#adbac7; line-height:1.55; }
+.ctag { margin-top:8px; font-size:11px; color:#8b949e; border-top:1px dashed #30363d; padding-top:6px; }
 .tok { color:#58a6ff; text-decoration:none; }
 .tok:active { color:#1f6feb; }
+.hint { color:#768390; font-size:11px; }
+.simcard { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px;
+  margin-bottom:8px; overflow-wrap:anywhere; }
+.simcard .crow { font-size:12.5px; }
+.simcard .cname { display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.vblock { margin-bottom:16px; }
+.vhead { font-size:13px; font-weight:700; color:#e6edf3; margin:10px 0 8px;
+  display:flex; align-items:center; gap:6px; flex-wrap:wrap; }
+.sub2 { font-size:12px; color:#8b949e; margin:10px 0 6px; letter-spacing:.5px; }
+.simlist { display:block; }
+.note { font-size:12px; color:#8b949e; }
+.badge.ok { background:#0d2818; color:#3fb950; }
 .mom { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; margin-bottom:8px; }
-.mrow { font-size:12px; line-height:1.6; }
-.mlab { font-size:10px; color:#d29922; margin-top:4px; }
+.mrow { font-size:13px; line-height:1.65; }
+.mlab { font-size:11px; color:#d29922; margin-top:4px; }
 .warn { color:#f85149; }
-.empty { color:#8b949e; font-size:12px; }
+.empty { color:#8b949e; font-size:13px; }
 .tab { display:none; }
 .tab.active { display:block; }
 .navbar { position:fixed; bottom:0; left:0; right:0; background:#010409; border-top:1px solid #30363d;
@@ -46,16 +58,16 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 .navbar span { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; }
 .navbar span.active { color:#1f6feb; }
 .scan { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; margin-bottom:8px; cursor:pointer; }
-.scan-h { display:flex; justify-content:space-between; align-items:center; font-size:13px; gap:8px; }
-.scan-h .meta { color:#8b949e; font-size:11px; white-space:nowrap; }
+.scan-h { display:flex; justify-content:space-between; align-items:center; font-size:14px; gap:8px; }
+.scan-h .meta { color:#8b949e; font-size:12px; white-space:nowrap; }
 .scan .detail { display:none; margin-top:8px; border-top:1px dashed #30363d; padding-top:8px; }
 .scan.open .detail { display:block; }
-.scan .tag { font-size:11px; margin:4px 0; line-height:1.6; }
-.htokens { font-size:12px; color:#adbac7; margin-top:4px; line-height:1.7; }
+.scan .tag { font-size:12.5px; margin:4px 0; line-height:1.65; }
+.htokens { font-size:13px; color:#adbac7; margin-top:4px; line-height:1.75; }
 .htokens a { display:inline-block; }
-.mc { color:#768390; font-size:11px; }
-.scan .ie { font-size:11px; color:#d29922; margin:4px 0; }
-.loadmore { display:block; width:100%; background:#161b22; border:1px solid #30363d; color:#58a6ff; border-radius:10px; padding:10px; font-size:12px; cursor:pointer; margin-top:4px; }
+.mc { color:#768390; font-size:12px; }
+.scan .ie { font-size:12px; color:#d29922; margin:4px 0; }
+.loadmore { display:block; width:100%; background:#161b22; border:1px solid #30363d; color:#58a6ff; border-radius:10px; padding:10px; font-size:13px; cursor:pointer; margin-top:4px; }
 @media(min-width:760px) {
   body { max-width:1100px; display:grid; grid-template-columns:160px 1fr; gap:16px; padding-bottom:20px; }
   .hdr { grid-column:1 / -1; }
@@ -70,7 +82,7 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 
 <header class="hdr">
   <div class="title">MEMECOIN LAB</div>
-  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; Last scan 12:00 WIB &nbsp;·&nbsp; radar 45m lalu</div>
+  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; Last scan 12:00 WIB &nbsp;·&nbsp; radar 60m lalu</div>
   <nav class="topnav">
     <span class="pill" data-tab="radar">RADAR</span>
     <span class="pill" data-tab="momentum">RESEARCH</span>
@@ -1051,7 +1063,7 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <div class="grid">
   <div class="card setup">
     <div class="cname">WICK RECLAIM <span class="badge res">🟡 RESEARCH</span></div>
-    <div class="crow">CA: 363<br>1H valid: 0<br>4H valid: 0</div>
+    <div class="crow">CA: 365<br>1H valid: 0<br>4H valid: 0</div>
   </div>
   <div class="card setup">
     <div class="cname">DEEP RETRACE <span class="badge res">🟡 RESEARCH</span></div>
@@ -1063,7 +1075,7 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   </div>
   <div class="card setup">
     <div class="cname">BASE</div>
-    <div class="crow">CA: 1436</div>
+    <div class="crow">CA: 1435</div>
   </div></div>
 </section>
   
@@ -1103,30 +1115,22 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;17</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;5</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;12</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;1</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;16</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
     <div class="card">
       <div class="cname">RETURN (valid-price)</div>
-      <div class="crow">Median&nbsp;&nbsp;-0.4%</div>
+      <div class="crow">Median&nbsp;&nbsp;-0.6%</div>
       <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;0%</div>
       <div class="ctag">N&lt;30 = INCONCLUSIVE</div>
     </div>
     <div class="card">
-      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump" target="_blank" rel="noopener noreferrer">SAME</a> -0.0%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/9Ay6YpwhmYVicrY34eyJTYyV43naxL13VGh5kUX9pump" target="_blank" rel="noopener noreferrer">BUDDY</a> -0.0%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/46vV3ZpFNLZn1CDRYnAvqPsdW5ejEYn9GK9kPcZFpump" target="_blank" rel="noopener noreferrer">honse</a> -0.4%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/EjD5Y9NVhXmtEqU7wYvAyZvDWZFQeEuHXFatJmTbpump" target="_blank" rel="noopener noreferrer">lickingcat</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/Bgvi4DPtuoPWr5PNj1di1Ci9Ap8qh9rSvj86Mxrcpump" target="_blank" rel="noopener noreferrer">DTG</a> -0.8%</div>
+      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/CAGtwKrcnwgLABdg5o16oMczxUV6i1pj973K9XWQpump" target="_blank" rel="noopener noreferrer">Gringott</a> -0.6%</div>
     </div>
     <div class="card">
-      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/Bgvi4DPtuoPWr5PNj1di1Ci9Ap8qh9rSvj86Mxrcpump" target="_blank" rel="noopener noreferrer">DTG</a> -0.8%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/EjD5Y9NVhXmtEqU7wYvAyZvDWZFQeEuHXFatJmTbpump" target="_blank" rel="noopener noreferrer">lickingcat</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/46vV3ZpFNLZn1CDRYnAvqPsdW5ejEYn9GK9kPcZFpump" target="_blank" rel="noopener noreferrer">honse</a> -0.4%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/9Ay6YpwhmYVicrY34eyJTYyV43naxL13VGh5kUX9pump" target="_blank" rel="noopener noreferrer">BUDDY</a> -0.0%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump" target="_blank" rel="noopener noreferrer">SAME</a> -0.0%</div>
+      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/CAGtwKrcnwgLABdg5o16oMczxUV6i1pj973K9XWQpump" target="_blank" rel="noopener noreferrer">Gringott</a> -0.6%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
@@ -1164,11 +1168,11 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     </div>
   </div>
 </section>
-  <section id="sim" class="tab"><h2>🧪 SIMULATED BUY <span class="badge res">🟡 RESEARCH</span></h2><div class="sub">SCAN → SIMULATED BUY → ACTIVE → TP/SL/EXPIRED → HISTORY. 0 byte production. Rank-only snapshot (survivorship bias). V1≠V2 — not comparable. N&lt;30 = INSUFFICIENT SAMPLE.</div><div class="vblock"><div class="vhead">V1 · DIRECT @ T0 + SL -15% <span class="badge res">🟢 LIVE</span> <span class="badge res">🟡 INSUFFICIENT SAMPLE</span></div><div class="grid"><div class="card"><div class="cname">STATUS</div><div class="crow">Simulated&nbsp;&nbsp;4</div><div class="crow">OPEN&nbsp;&nbsp;0</div><div class="crow">CLOSED&nbsp;&nbsp;4</div><div class="crow">UNFILLED&nbsp;&nbsp;0</div><div class="crow">DQ Excluded&nbsp;&nbsp;42</div></div><div class="card"><div class="cname">EXITS (closed)</div><div class="crow">TP30&nbsp;&nbsp;2</div><div class="crow">SL&nbsp;&nbsp;2</div></div><div class="card"><div class="cname">STATS</div><div class="crow">WR&nbsp;&nbsp;50.0%</div><div class="crow">Median PnL&nbsp;&nbsp;+7.5%</div><div class="crow">Expectancy&nbsp;&nbsp;+7.5%</div><div class="crow">Fresh OK&nbsp;&nbsp;0</div><div class="crow">Partial GAP&nbsp;&nbsp;14</div><div class="crow">Low Cov&nbsp;&nbsp;10</div></div></div><div class="sub2">ACTIVE SIMULATIONS</div><div class="simlist"><div class="note">none</div></div><div class="sub2">SIMULATION HISTORY</div><div class="simlist"><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/AvecKFxn8ihToR7gwgAVjfqV56N1rWhN7hv8joXQpump" target="_blank" rel="noopener noreferrer">COGE</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00017872 · fill $0.00017872 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00023234 / $0.00026808 / $0.00029489 / $0.00033064</div><div class="crow">SL $0.00015191</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/hVha9sExfqchfVA8jsrdwDN4Wczep2o48adCnY6pump" target="_blank" rel="noopener noreferrer">TINKERBULL</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $7.7807e-05 · fill $7.7807e-05 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 16:30</div><div class="crow">TP30/50/65/85 $0.00010115 / $0.00011671 / $0.00012838 / $0.00014394</div><div class="crow">SL $6.6136e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/EUB1eZBt4m3X4FbperWnKGJdvLsuLMu2YmJix5yjpump" target="_blank" rel="noopener noreferrer">K-HOME</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00187946 · fill $0.00187946 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 17:45</div><div class="crow">TP30/50/65/85 $0.0024433 / $0.00281919 / $0.00310111 / $0.003477</div><div class="crow">SL $0.00159754</div><div class="crow">exit SL · PnL -15.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/E3i7sTY5QYEBh3itepnomZQt7Eh5kzmHFk1vkm2pump" target="_blank" rel="noopener noreferrer">cc</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00096748 · fill $0.00096748 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00125772 / $0.00145122 / $0.00159634 / $0.00178984</div><div class="crow">SL $0.00082236</div><div class="crow">exit SL · PnL -15.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div></div></div><div class="vblock"><div class="vhead">V2 · LIMIT -15% (T0×0.85) + SL -35% (from fill) <span class="badge res">🟢 LIVE</span> <span class="badge res">🟡 INSUFFICIENT SAMPLE</span></div><div class="grid"><div class="card"><div class="cname">STATUS</div><div class="crow">Simulated&nbsp;&nbsp;4</div><div class="crow">OPEN&nbsp;&nbsp;0</div><div class="crow">CLOSED&nbsp;&nbsp;4</div><div class="crow">UNFILLED&nbsp;&nbsp;0</div><div class="crow">DQ Excluded&nbsp;&nbsp;42</div></div><div class="card"><div class="cname">EXITS (closed)</div><div class="crow">TP30&nbsp;&nbsp;2</div><div class="crow">SL&nbsp;&nbsp;2</div></div><div class="card"><div class="cname">STATS</div><div class="crow">WR&nbsp;&nbsp;50.0%</div><div class="crow">Median PnL&nbsp;&nbsp;-2.5%</div><div class="crow">Expectancy&nbsp;&nbsp;-2.5%</div><div class="crow">Fresh OK&nbsp;&nbsp;0</div><div class="crow">Partial GAP&nbsp;&nbsp;14</div><div class="crow">Low Cov&nbsp;&nbsp;10</div></div></div><div class="sub2">ACTIVE SIMULATIONS</div><div class="simlist"><div class="note">none</div></div><div class="sub2">SIMULATION HISTORY</div><div class="simlist"><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/AvecKFxn8ihToR7gwgAVjfqV56N1rWhN7hv8joXQpump" target="_blank" rel="noopener noreferrer">COGE</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00015191 · fill $0.00015191 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 20:15</div><div class="crow">TP30/50/65/85 $0.00019749 / $0.00022787 / $0.00025066 / $0.00028104</div><div class="crow">SL $9.8744e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/hVha9sExfqchfVA8jsrdwDN4Wczep2o48adCnY6pump" target="_blank" rel="noopener noreferrer">TINKERBULL</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $6.6136e-05 · fill $6.6136e-05 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 16:30</div><div class="crow">TP30/50/65/85 $8.5977e-05 / $9.9204e-05 / $0.00010912 / $0.00012235</div><div class="crow">SL $4.2988e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/EUB1eZBt4m3X4FbperWnKGJdvLsuLMu2YmJix5yjpump" target="_blank" rel="noopener noreferrer">K-HOME</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00159754 · fill $0.00159754 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 17:45</div><div class="crow">TP30/50/65/85 $0.0020768 / $0.00239631 / $0.00263594 / $0.00295545</div><div class="crow">SL $0.0010384</div><div class="crow">exit SL · PnL -35.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/E3i7sTY5QYEBh3itepnomZQt7Eh5kzmHFk1vkm2pump" target="_blank" rel="noopener noreferrer">cc</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00082236 · fill $0.00082236 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00106907 / $0.00123354 / $0.00135689 / $0.00152136</div><div class="crow">SL $0.00053453</div><div class="crow">exit SL · PnL -35.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div></div></div></section>
+  <section id="sim" class="tab"><h2>🧪 SIMULATED BUY <span class="badge res">🟡 RESEARCH</span></h2><div class="sub">SCAN → SIMULATED BUY → ACTIVE → TP/SL/EXPIRED → HISTORY. 0 byte production. Rank-only snapshot (survivorship bias). V1≠V2 — not comparable. N&lt;30 = INSUFFICIENT SAMPLE.</div><div class="vblock"><div class="vhead">V1 · DIRECT @ T0 + SL -15% <span class="badge res">🟢 LIVE</span> <span class="badge res">🟡 INSUFFICIENT SAMPLE</span></div><div class="grid"><div class="card"><div class="cname">STATUS</div><div class="crow">Simulated&nbsp;&nbsp;4</div><div class="crow">OPEN&nbsp;&nbsp;0</div><div class="crow">CLOSED&nbsp;&nbsp;4</div><div class="crow">UNFILLED&nbsp;&nbsp;0</div><div class="crow">DQ Excluded&nbsp;&nbsp;46</div></div><div class="card"><div class="cname">EXITS (closed)</div><div class="crow">TP30&nbsp;&nbsp;2</div><div class="crow">SL&nbsp;&nbsp;2</div></div><div class="card"><div class="cname">STATS</div><div class="crow">WR&nbsp;&nbsp;50.0%</div><div class="crow">Median PnL&nbsp;&nbsp;+7.5%</div><div class="crow">Expectancy&nbsp;&nbsp;+7.5%</div><div class="crow">Fresh OK&nbsp;&nbsp;0</div><div class="crow">Partial GAP&nbsp;&nbsp;14</div><div class="crow">Low Cov&nbsp;&nbsp;10</div></div></div><div class="sub2">ACTIVE SIMULATIONS</div><div class="simlist"><div class="note">none</div></div><div class="sub2">SIMULATION HISTORY</div><div class="simlist"><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/AvecKFxn8ihToR7gwgAVjfqV56N1rWhN7hv8joXQpump" target="_blank" rel="noopener noreferrer">COGE</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00017872 · fill $0.00017872 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00023234 / $0.00026808 / $0.00029489 / $0.00033064</div><div class="crow">SL $0.00015191</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/hVha9sExfqchfVA8jsrdwDN4Wczep2o48adCnY6pump" target="_blank" rel="noopener noreferrer">TINKERBULL</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $7.7807e-05 · fill $7.7807e-05 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 16:30</div><div class="crow">TP30/50/65/85 $0.00010115 / $0.00011671 / $0.00012838 / $0.00014394</div><div class="crow">SL $6.6136e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/EUB1eZBt4m3X4FbperWnKGJdvLsuLMu2YmJix5yjpump" target="_blank" rel="noopener noreferrer">K-HOME</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00187946 · fill $0.00187946 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 17:45</div><div class="crow">TP30/50/65/85 $0.0024433 / $0.00281919 / $0.00310111 / $0.003477</div><div class="crow">SL $0.00159754</div><div class="crow">exit SL · PnL -15.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/E3i7sTY5QYEBh3itepnomZQt7Eh5kzmHFk1vkm2pump" target="_blank" rel="noopener noreferrer">cc</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00096748 · fill $0.00096748 <span class="hint">(fill = entry @T0 (DIRECT, by design))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00125772 / $0.00145122 / $0.00159634 / $0.00178984</div><div class="crow">SL $0.00082236</div><div class="crow">exit SL · PnL -15.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div></div></div><div class="vblock"><div class="vhead">V2 · LIMIT -15% (T0×0.85) + SL -35% (from fill) <span class="badge res">🟢 LIVE</span> <span class="badge res">🟡 INSUFFICIENT SAMPLE</span></div><div class="grid"><div class="card"><div class="cname">STATUS</div><div class="crow">Simulated&nbsp;&nbsp;4</div><div class="crow">OPEN&nbsp;&nbsp;0</div><div class="crow">CLOSED&nbsp;&nbsp;4</div><div class="crow">UNFILLED&nbsp;&nbsp;0</div><div class="crow">DQ Excluded&nbsp;&nbsp;46</div></div><div class="card"><div class="cname">EXITS (closed)</div><div class="crow">TP30&nbsp;&nbsp;2</div><div class="crow">SL&nbsp;&nbsp;2</div></div><div class="card"><div class="cname">STATS</div><div class="crow">WR&nbsp;&nbsp;50.0%</div><div class="crow">Median PnL&nbsp;&nbsp;-2.5%</div><div class="crow">Expectancy&nbsp;&nbsp;-2.5%</div><div class="crow">Fresh OK&nbsp;&nbsp;0</div><div class="crow">Partial GAP&nbsp;&nbsp;14</div><div class="crow">Low Cov&nbsp;&nbsp;10</div></div></div><div class="sub2">ACTIVE SIMULATIONS</div><div class="simlist"><div class="note">none</div></div><div class="sub2">SIMULATION HISTORY</div><div class="simlist"><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/AvecKFxn8ihToR7gwgAVjfqV56N1rWhN7hv8joXQpump" target="_blank" rel="noopener noreferrer">COGE</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00015191 · fill $0.00015191 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 20:15</div><div class="crow">TP30/50/65/85 $0.00019749 / $0.00022787 / $0.00025066 / $0.00028104</div><div class="crow">SL $9.8744e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/hVha9sExfqchfVA8jsrdwDN4Wczep2o48adCnY6pump" target="_blank" rel="noopener noreferrer">TINKERBULL</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $6.6136e-05 · fill $6.6136e-05 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 16:30</div><div class="crow">TP30/50/65/85 $8.5977e-05 / $9.9204e-05 / $0.00010912 / $0.00012235</div><div class="crow">SL $4.2988e-05</div><div class="crow">exit TP30 · PnL +30.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/EUB1eZBt4m3X4FbperWnKGJdvLsuLMu2YmJix5yjpump" target="_blank" rel="noopener noreferrer">K-HOME</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00159754 · fill $0.00159754 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 17:45</div><div class="crow">TP30/50/65/85 $0.0020768 / $0.00239631 / $0.00263594 / $0.00295545</div><div class="crow">SL $0.0010384</div><div class="crow">exit SL · PnL -35.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div><div class="simcard"><div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/E3i7sTY5QYEBh3itepnomZQt7Eh5kzmHFk1vkm2pump" target="_blank" rel="noopener noreferrer">cc</a> <span class="badge ok">✅ CLOSED</span></div><div class="crow">setup B · T0 —</div><div class="crow">entry(T0) $0.00082236 · fill $0.00082236 <span class="hint">(fill @ limit price (T0×0.85))</span></div><div class="crow">fill&nbsp;ts 12-08 18:00</div><div class="crow">TP30/50/65/85 $0.00106907 / $0.00123354 / $0.00135689 / $0.00152136</div><div class="crow">SL $0.00053453</div><div class="crow">exit SL · PnL -35.0% · hold 0.00h</div><div class="crow">fresh LOW_COVERAGE · src radar+fresh_full_path</div></div></div></div></section>
   
 <section id="maresearch" class="tab">
   <h2>🧪 MA RESEARCH <span class="badge res">🟡 RESEARCH</span></h2>
-  <div class="sub">RESEARCH ONLY — bukan BUY signal · confluence visibility · 2026-08-16T09:41:52+0700</div>
+  <div class="sub">RESEARCH ONLY — bukan BUY signal · confluence visibility · 2026-08-16T12:47:45+0700</div>
   <div class="warn">Cohort dengan ma_ok 0 = INSUFFICIENT_HISTORY / VOL_UNDER_THRESHOLD / FETCH fail (Gecko keyless cap 100 bar per call). Token tetap ditampilkan apa adanya dengan alasannya — tidak diada-adakan.</div>
   
 <section class="scan" data-scan>
@@ -1177,43 +1181,43 @@ h2 { font-size:15px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 10</div>
     <div class="grid">
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/DePfuMZ4Y2rpjdiFUYAnwgEWpSDbtrD6LQSGUQmbpump" target="_blank" rel="noopener noreferrer">PumpBot</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/iFYiJU8VP3FLhtjAR4p4pP3jkxhZUbv1KfyhbsLpump" target="_blank" rel="noopener noreferrer">NEPE</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 5 bar < MA50</div>
-    <div class="crow">vol $604,920 · tf 15m · MA50</div>
-    <div class="ctag">DePf…pump</div>
+    <div class="crow">hanya 6 bar < MA50</div>
+    <div class="crow">vol $441,424 · tf 15m · MA50</div>
+    <div class="ctag">iFYi…pump</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/A9DFFiuCTx4PtrgMLgHew18xvcfGNWc6SaHDep95pump" target="_blank" rel="noopener noreferrer">REXLER</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 10 bar < MA50</div>
-    <div class="crow">vol $423,874 · tf 15m · MA50</div>
-    <div class="ctag">A9DF…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/5TLmdH1uYUYoDYULWXp2vwrwX85uSWneSbTcDDujqzEe" target="_blank" rel="noopener noreferrer">X</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 7 bar < MA50</div>
-    <div class="crow">vol $155,400 · tf 15m · MA50</div>
-    <div class="ctag">5TLm…qzEe</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Ad5V1WCU99Ldrt3hJciaVJcLgohyz9v5sJpNTd8Qpump" target="_blank" rel="noopener noreferrer">bih</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/CgEDLG3EexhPuDWjCdhFo6pT3uUQBEodkR1hCDiSpump" target="_blank" rel="noopener noreferrer">NEPE</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
     <div class="crow">hanya 3 bar < MA50</div>
-    <div class="crow">vol $110,903 · tf 15m · MA50</div>
-    <div class="ctag">Ad5V…pump</div>
+    <div class="crow">vol $150,479 · tf 15m · MA50</div>
+    <div class="ctag">CgED…pump</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/6CWwq4n5Wn6ZHBYRZjtiTroD7Uyy4pKEbBQzkSdspump" target="_blank" rel="noopener noreferrer">Leonardian</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/HNco6ivsZGeCbtfxWvqmJVKXqvcJkidJGz4BPMhppump" target="_blank" rel="noopener noreferrer">SOLCAT</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 7 bar < MA50</div>
-    <div class="crow">vol $80,658 · tf 15m · MA50</div>
-    <div class="ctag">6CWw…pump</div>
+    <div class="crow">hanya 4 bar < MA50</div>
+    <div class="crow">vol $128,189 · tf 15m · MA50</div>
+    <div class="ctag">HNco…pump</div>
+  </div>
+
+  <div class="card">
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/BGz9Dz8hK8mWSMWWraBV2qwN2CwVDbhgBcULx3qRpump" target="_blank" rel="noopener noreferrer">Qlingool</a></div>
+    <div class="crow warn">INSUFFICIENT_HISTORY</div>
+    <div class="crow">hanya 5 bar < MA50</div>
+    <div class="crow">vol $127,435 · tf 15m · MA50</div>
+    <div class="ctag">BGz9…pump</div>
+  </div>
+
+  <div class="card">
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Dy1hR6nUAiVf48wXjQyWUSx9QiRgeN5ck4MBGu6Cpump" target="_blank" rel="noopener noreferrer">MONEYMAKER</a></div>
+    <div class="crow warn">INSUFFICIENT_HISTORY</div>
+    <div class="crow">hanya 4 bar < MA50</div>
+    <div class="crow">vol $94,429 · tf 15m · MA50</div>
+    <div class="ctag">Dy1h…pump</div>
   </div></div>
   </div>
 </section>
