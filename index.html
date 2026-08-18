@@ -2,18 +2,18 @@
 <html lang="id">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>MEMECOIN SCAN</title>
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
 body { background:#0d1117; color:#e6edf3; font-family:-apple-system,Segoe UI,Roboto,sans-serif;
-  padding:14px 14px 90px; max-width:900px; margin:0 auto; }
+  padding:10px 10px 110px; max-width:900px; margin:0 auto; }
 .hdr { border-bottom:1px solid #21262d; padding-bottom:10px; margin-bottom:12px; }
 .title { font-size:21px; font-weight:700; letter-spacing:1px; }
 .sysline { font-size:13px; color:#8b949e; margin-top:4px; }
 .dot.ok { color:#3fb950; }
-.topnav { margin-top:10px; display:flex; gap:8px; }
-.pill { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:5px 12px; font-size:13px; cursor:pointer; }
+.topnav { margin-top:10px; display:flex; gap:8px; overflow-x:auto; padding-bottom:4px; }
+.pill { background:#161b22; border:1px solid #30363d; border-radius:14px; padding:5px 12px; font-size:13px; cursor:pointer; white-space:nowrap; flex-shrink:0; }
 .pill.active { background:#1f6feb; border-color:#1f6feb; }
 h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
 .sub { font-size:13px; color:#8b949e; margin-bottom:10px; }
@@ -54,8 +54,8 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 .tab { display:none; }
 .tab.active { display:block; }
 .navbar { position:fixed; bottom:0; left:0; right:0; background:#010409; border-top:1px solid #30363d;
-  display:flex; justify-content:space-around; padding:8px 0; max-width:900px; margin:0 auto; }
-.navbar span { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; }
+  display:flex; flex-wrap:wrap; justify-content:space-around; gap:2px 0; padding:4px 2px calc(4px + env(safe-area-inset-bottom)); max-width:900px; margin:0 auto; }
+.navbar span { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; min-width:17%; padding:6px 0; }
 .navbar span.active { color:#1f6feb; }
 .scan { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; margin-bottom:8px; cursor:pointer; }
 .scan-h { display:flex; justify-content:space-between; align-items:center; font-size:14px; gap:8px; }
@@ -82,7 +82,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 
 <header class="hdr">
   <div class="title">MEMECOIN LAB</div>
-  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; Last scan 08:00 WIB &nbsp;·&nbsp; radar 75m lalu</div>
+  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; Last scan 08:00 WIB &nbsp;·&nbsp; radar 83m lalu</div>
   <nav class="topnav">
     <span class="pill" data-tab="radar">RADAR</span>
     <span class="pill" data-tab="momentum">RESEARCH</span>
@@ -1260,26 +1260,24 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;17</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;3</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;14</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;2</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;15</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
     <div class="card">
       <div class="cname">RETURN (valid-price)</div>
-      <div class="crow">Median&nbsp;&nbsp;-0.8%</div>
+      <div class="crow">Median&nbsp;&nbsp;-0.4%</div>
       <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;0%</div>
       <div class="ctag">N&lt;30 = INCONCLUSIVE</div>
     </div>
     <div class="card">
-      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/J6xVFRZTX8Q5pd8tdxRcM7D43EmpAyXrCCpXh9TRpump" target="_blank" rel="noopener noreferrer">NETBOY</a> -0.8%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DXeiA5R9GLXuNjG2Vke7784bdN2z1go7Hzc5wnAVpump" target="_blank" rel="noopener noreferrer">zkALIFE</a> -0.8%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DTGWeDVPAvr7TdY7sdbfjz2bi4QihVMMn9KhyKH1pump" target="_blank" rel="noopener noreferrer">WOFL</a> -0.9%</div>
+      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DKxHTQCvDKUke1WpsHgbfueuRiTMqdzXrWeFHPvzpump" target="_blank" rel="noopener noreferrer">奶蛙</a> -0.0%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/J6xVFRZTX8Q5pd8tdxRcM7D43EmpAyXrCCpXh9TRpump" target="_blank" rel="noopener noreferrer">NETBOY</a> -0.8%</div>
     </div>
     <div class="card">
-      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DTGWeDVPAvr7TdY7sdbfjz2bi4QihVMMn9KhyKH1pump" target="_blank" rel="noopener noreferrer">WOFL</a> -0.9%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DXeiA5R9GLXuNjG2Vke7784bdN2z1go7Hzc5wnAVpump" target="_blank" rel="noopener noreferrer">zkALIFE</a> -0.8%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/J6xVFRZTX8Q5pd8tdxRcM7D43EmpAyXrCCpXh9TRpump" target="_blank" rel="noopener noreferrer">NETBOY</a> -0.8%</div>
+      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/J6xVFRZTX8Q5pd8tdxRcM7D43EmpAyXrCCpXh9TRpump" target="_blank" rel="noopener noreferrer">NETBOY</a> -0.8%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DKxHTQCvDKUke1WpsHgbfueuRiTMqdzXrWeFHPvzpump" target="_blank" rel="noopener noreferrer">奶蛙</a> -0.0%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
@@ -1321,7 +1319,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   
 <section id="maresearch" class="tab">
   <h2>🧪 MA RESEARCH <span class="badge res">🟡 RESEARCH</span></h2>
-  <div class="sub">RESEARCH ONLY — bukan BUY signal · confluence visibility · 2026-08-18T08:53:36+0700</div>
+  <div class="sub">RESEARCH ONLY — bukan BUY signal · confluence visibility · 2026-08-18T09:22:37+0700</div>
   <div class="warn">Cohort dengan ma_ok 0 = INSUFFICIENT_HISTORY / VOL_UNDER_THRESHOLD / FETCH fail (Gecko keyless cap 100 bar per call). Token tetap ditampilkan apa adanya dengan alasannya — tidak diada-adakan.</div>
   
 <section class="scan" data-scan>
@@ -1419,92 +1417,92 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 <section class="scan" data-scan>
   <div class="scan-h"><span>📊 MA200_30m</span><span class="meta">NO MA DATA · 5 shown</span></div>
   <div class="detail">
-    <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 7 · FETCH:OHLCV:RETRY_EXHAUSTED 3</div>
+    <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 9 · FETCH:OHLCV:RETRY_EXHAUSTED 1</div>
     <div class="grid">
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k" target="_blank" rel="noopener noreferrer">BULLSHIT</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Dp8MoFwMtJPBY9CPGKx6GWhxFcsQCRR1S8DyrqFduZdK" target="_blank" rel="noopener noreferrer">PURP</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 8 bar < MA200</div>
-    <div class="crow">vol $933,431 · tf 30m · MA200</div>
-    <div class="ctag">zj1j…ry2k</div>
+    <div class="crow">hanya 5 bar < MA200</div>
+    <div class="crow">vol $310,845 · tf 30m · MA200</div>
+    <div class="ctag">Dp8M…uZdK</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Hz2Gfw5PrNoDW8Fb9zT2D8h6VBhuN5UsToNp6MRSbonk" target="_blank" rel="noopener noreferrer">BONKCAT</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 1 bar < MA200</div>
-    <div class="crow">vol $814,939 · tf 30m · MA200</div>
-    <div class="ctag">Hz2G…bonk</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/7n8kRipxAQBfpGQtcGA2AbkM2HASSVCzqZ5F3QEopump" target="_blank" rel="noopener noreferrer">Zoe</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/ALUvhkRCXDs6uJGigkcKz4ewux7XbUUMM7p6TFYjpump" target="_blank" rel="noopener noreferrer">DPG</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
     <div class="crow">hanya 2 bar < MA200</div>
-    <div class="crow">vol $733,975 · tf 30m · MA200</div>
-    <div class="ctag">7n8k…pump</div>
+    <div class="crow">vol $216,787 · tf 30m · MA200</div>
+    <div class="ctag">ALUv…pump</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/6Zjrjkr8qtCy1MSx1wxVvwWQ2KBms7q2dCubCnvgc1F3" target="_blank" rel="noopener noreferrer">WIN</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/6WV4h21ggUgM66fYQu8gVSestDNZsUmnpD681Qzmpump" target="_blank" rel="noopener noreferrer">DRIP</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 2 bar < MA200</div>
-    <div class="crow">vol $320,582 · tf 30m · MA200</div>
-    <div class="ctag">6Zjr…c1F3</div>
+    <div class="crow">hanya 3 bar < MA200</div>
+    <div class="crow">vol $199,524 · tf 30m · MA200</div>
+    <div class="ctag">6WV4…pump</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/7rbffF66CUmvCWSHcExwsw5z7YQ17ePYAtMYJkBQpump" target="_blank" rel="noopener noreferrer">SPACE</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/CNp4hHsNrHC35szyQtfnVTr76Ss7naUqbr4meLhRjvq7" target="_blank" rel="noopener noreferrer">BTC</a></div>
     <div class="crow warn">INSUFFICIENT_HISTORY</div>
     <div class="crow">hanya 2 bar < MA200</div>
-    <div class="crow">vol $301,003 · tf 30m · MA200</div>
-    <div class="ctag">7rbf…pump</div>
+    <div class="crow">vol $75,643 · tf 30m · MA200</div>
+    <div class="ctag">CNp4…jvq7</div>
+  </div>
+
+  <div class="card">
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/9JohYLSBcjKoicCTJrLhehBZNeXZixL6565UhRbXpump" target="_blank" rel="noopener noreferrer">AHS</a></div>
+    <div class="crow warn">INSUFFICIENT_HISTORY</div>
+    <div class="crow">hanya 2 bar < MA200</div>
+    <div class="crow">vol $64,589 · tf 30m · MA200</div>
+    <div class="ctag">9Joh…pump</div>
   </div></div>
   </div>
 </section>
 <section class="scan" data-scan>
   <div class="scan-h"><span>📊 MA50_1h</span><span class="meta">NO MA DATA · 5 shown</span></div>
   <div class="detail">
-    <div class="ie">cohort 10 token · ma_ok 0 · dq: VOL_UNDER_THRESHOLD 9 · INSUFFICIENT_HISTORY 1</div>
+    <div class="ie">cohort 10 token · ma_ok 0 · dq: VOL_UNDER_THRESHOLD 10</div>
     <div class="grid">
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Hz2Gfw5PrNoDW8Fb9zT2D8h6VBhuN5UsToNp6MRSbonk" target="_blank" rel="noopener noreferrer">BONKCAT</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 2 bar < MA50</div>
-    <div class="crow">vol $1,029,120 · tf 1h · MA50</div>
-    <div class="ctag">Hz2G…bonk</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/AwU7jS1gSFuuUi6NwPhi43fKJPXvzgnswamVHNetpump" target="_blank" rel="noopener noreferrer">Odyssey</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/6acH1iae44zL4haWNNCaqcTqS2Q7KNYsWErxCoLW9u9P" target="_blank" rel="noopener noreferrer">ONELEG</a></div>
     <div class="crow warn">VOL_UNDER_THRESHOLD</div>
     <div class="crow"></div>
     <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">AwU7…pump</div>
+    <div class="ctag">6acH…9u9P</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/7rLqrLpVCEjbL7kFPby9wC4EsWQPDptUzpn9yKSAbonk" target="_blank" rel="noopener noreferrer">BONKCAT</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/tZtrc9zSftWjTCM5oEm2dXfzHMYRy6H7u43jFDbTb2z" target="_blank" rel="noopener noreferrer">ATN</a></div>
     <div class="crow warn">VOL_UNDER_THRESHOLD</div>
     <div class="crow"></div>
     <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">7rLq…bonk</div>
+    <div class="ctag">tZtr…Tb2z</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Ev9Dv9fNPRxb1dH9A9UUX2fsgy52syc8woY3JpaJpump" target="_blank" rel="noopener noreferrer">Lao Tzu</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/7mSx9fSDbNumi4o4n9iJbhvV2Jz3d3ga2Ja7fEGupump" target="_blank" rel="noopener noreferrer">Quanzavious</a></div>
     <div class="crow warn">VOL_UNDER_THRESHOLD</div>
     <div class="crow"></div>
     <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">Ev9D…pump</div>
+    <div class="ctag">7mSx…pump</div>
   </div>
 
   <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/3DB8mWA1Lru8o2dktJ9NuwzfAKcNTvXKZmsjMJz1pump" target="_blank" rel="noopener noreferrer">bul</a></div>
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/Ejt6kuaShgTFnonCNNCiCdQbDjn9J8cAPideobK2y3h2" target="_blank" rel="noopener noreferrer">CHILLSEM</a></div>
     <div class="crow warn">VOL_UNDER_THRESHOLD</div>
     <div class="crow"></div>
     <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">3DB8…pump</div>
+    <div class="ctag">Ejt6…y3h2</div>
+  </div>
+
+  <div class="card">
+    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/GrD7he52y7Mapb2MGvRPYbFsMirBNFTydYkXCCHWpump" target="_blank" rel="noopener noreferrer">CLOWNCAT</a></div>
+    <div class="crow warn">VOL_UNDER_THRESHOLD</div>
+    <div class="crow"></div>
+    <div class="crow">vol — · tf — · MA—</div>
+    <div class="ctag">GrD7…pump</div>
   </div></div>
   </div>
 </section>
