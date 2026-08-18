@@ -59,7 +59,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 .tab.active { display:block; }
 .navbar { position:fixed; bottom:0; left:0; right:0; background:#010409; border-top:1px solid #30363d;
   display:flex; flex-wrap:wrap; justify-content:space-around; gap:2px 0; padding:4px 2px calc(4px + env(safe-area-inset-bottom)); max-width:900px; margin:0 auto; }
-.navbar span { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; min-width:17%; padding:14px 0; line-height:14px; } /* audit 18-08: tap target >=40px */
+.navbar span, .navbar a { font-size:11px; color:#8b949e; cursor:pointer; text-align:center; min-width:16%; padding:14px 0; line-height:14px; text-decoration:none; } /* audit 18-08: tap target >=40px; 12 item canonical */
 .navbar span.active { color:#1f6feb; }
 .scan { background:#161b22; border:1px solid #30363d; border-radius:10px; padding:10px; margin-bottom:8px; cursor:pointer; }
 .scan-h { display:flex; justify-content:space-between; align-items:center; font-size:14px; gap:8px; }
@@ -77,7 +77,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   .hdr { grid-column:1 / -1; }
   .navbar { display:none; }
   .sidebar { display:flex; flex-direction:column; gap:6px; }
-  .sidebar span { font-size:12px; color:#8b949e; cursor:pointer; padding:6px 8px; border-radius:8px; }
+  .sidebar span, .sidebar a { font-size:12px; color:#8b949e; cursor:pointer; padding:6px 8px; border-radius:8px; text-decoration:none; }
   .sidebar span.active { background:#161b22; color:#1f6feb; }
 }
 </style>
@@ -86,20 +86,13 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
 
 <header class="hdr">
   <div class="title">MEMECOIN SCAN</div>
-  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 18-08 20:00 WIB &nbsp;·&nbsp; gen 18-08 21:45 WIB &nbsp;·&nbsp; radar 105m lalu</div>
-  <nav class="topnav">
-    <span class="pill" data-tab="radar">RADAR</span>
-    <a class="pill" href="https://kingvavasav.github.io/holder-health/" target="_blank" rel="noopener" style="text-decoration:none;color:inherit">🩺 HOLDER HEALTH</a>
-    <span class="pill" data-tab="momentum">RESEARCH</span>
-    <span class="pill" data-tab="outcome">OUTCOME</span>
-    <span class="pill" data-tab="paper">PAPER</span>
-    <span class="pill" data-tab="maresearch">🧪 MA RESEARCH</span>
-  </nav>
+  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 18-08 20:00 WIB &nbsp;·&nbsp; gen 18-08 21:59 WIB &nbsp;·&nbsp; radar 119m lalu</div>
 </header>
 <div class="sidebar">
-  <span data-tab="radar" class="active">🔥 RADAR</span>
+<span data-tab="radar" class="active">🔥 RADAR</span>
   <span data-tab="flow">🌊 FLOW</span>
-  <span data-tab="history">🕒 HISTORY</span>
+  <span data-tab="history">🕒 4H HISTORY</span>
+  <span data-tab="shadow5m">🚨 SHADOW 5M</span>
   <span data-tab="momentum">⚡️ MOMENTUM</span>
   <span data-tab="setup">📈 SETUP</span>
   <span data-tab="security">🛡 SECURITY</span>
@@ -107,12 +100,12 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <span data-tab="paper">📝 PAPER</span>
   <span data-tab="sim">🧪 SIM</span>
   <span data-tab="maresearch">🧪 MA</span>
-  <a href="https://kingvavasav.github.io/holder-health/" target="_blank" rel="noopener" style="font-size:12px;color:#8b949e;padding:6px 8px;border-radius:8px;text-decoration:none">🩺 HOLDER HEALTH</a>
-  </div>
+  <a href="https://kingvavasav.github.io/holder-health/" target="_blank" rel="noopener">🩺 HOLDER HEALTH</a>
+</div>
   
 <section id="radar" class="tab">
   <h2>🔥 RADAR <span class="badge live">🟢 LIVE DATA</span></h2>
-  <div class="sub">20:00 WIB · 3 Candidates</div>
+  <div class="sub">20:00 WIB · 3 Candidates · candidate selection dari radar scan</div>
   <div class="grid">
   <div class="card">
     <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/9wjfCUrZGq5n9od9UaZzY44uU5pRsojGJRtSKyTGpump" target="_blank" rel="noopener noreferrer">RDDT</a></div>
@@ -150,555 +143,455 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx" target="_blank" rel="noopener noreferrer">STONK</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 361</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-6, 14, 5, -46, -12...]</span>
+    <span>Obs: 361</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[62]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/A13oRB9FFaiUjfi6LdCg6p9ka1u8SfGkUFs4SKvPpump" target="_blank" rel="noopener noreferrer">TOAD</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 359</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-10, -10, -8, -57, 25...]</span>
+    <span>Obs: 359</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[67]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HxQhDGYqyjorgogMJx7YbBHADEDxuHhLnMMmr6VYpyn" target="_blank" rel="noopener noreferrer">MANLET</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 357</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [25, 41, 14, 68, -16...]</span>
+    <span>Obs: 357</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[80]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Ai66LHZG9MCzg1WKdawwqduVAXpNDUuV8M3uyq5ppump" target="_blank" rel="noopener noreferrer">CATE</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 354</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-23, -43, -17, -55, -20...]</span>
+    <span>Obs: 354</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[81]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump" target="_blank" rel="noopener noreferrer">Jimothy</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 345</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-3, 21, 8, -16, -13...]</span>
+    <span>Obs: 345</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[96]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/7ssJZGFT3twGqeYA1kvpoMWwZYvMZvrMEbjRaWgg46BL" target="_blank" rel="noopener noreferrer">BUTTHOLE</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 342</span> |
-    <span>Last scan: 18-08 21:00 WIB</span> |
-    <span>Deltas: [1, -8, -6, -23, -9...]</span>
+    <span>Obs: 342</span> ·
+    <span>Last scan: 18-08 21:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T210051.json#rank[84]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/GCa9TZMK9Q3VUSkhZgX76YAQBjqQd1dPxkBnZojFpump" target="_blank" rel="noopener noreferrer">Plumber</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 325</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-80, -68, 0, -7, -15...]</span>
+    <span>Obs: 325</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[72]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HukaK2eHhbTyiuUwuKMntjPJP4aGdD4VwiExsNmyT8WJ" target="_blank" rel="noopener noreferrer">BOT</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 325</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [6221, -569, -283, -65, 529...]</span>
+    <span>Obs: 325</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[82]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/23e4CNuJxvBQ7RjNLc8Bh3yN3pQq6jeiTbyzJGXYPgme" target="_blank" rel="noopener noreferrer">Remus</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 321</span> |
-    <span>Last scan: 18-08 18:00 WIB</span> |
-    <span>Deltas: [0, 26, -9, 16, 2...]</span>
+    <span>Obs: 321</span> ·
+    <span>Last scan: 18-08 18:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T180047.json#rank[82]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CX2v7JSHJQDcNooubzzvZG8TPaDwbaPgfzcXRSWJpump" target="_blank" rel="noopener noreferrer">MARIO64</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 298</span> |
-    <span>Last scan: 18-08 21:00 WIB</span> |
-    <span>Deltas: [372, -20, 292, 72, 760...]</span>
+    <span>Obs: 298</span> ·
+    <span>Last scan: 18-08 21:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T210051.json#rank[88]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Gymbmn9wwMKe4NnmVceyyfpncp9arbwPfSdBsyY9pump" target="_blank" rel="noopener noreferrer">Doom</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 259</span> |
-    <span>Last scan: 18-08 20:00 WIB</span> |
-    <span>Deltas: [3, -8, -1, -4, 2...]</span>
+    <span>Obs: 259</span> ·
+    <span>Last scan: 18-08 20:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T200050.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4LHBp4xYs3suKjkCuo1qaNaxufWd4Bdp6QYsBJZNpump" target="_blank" rel="noopener noreferrer">sami</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 259</span> |
-    <span>Last scan: 18-08 21:00 WIB</span> |
-    <span>Deltas: [1857, -272, -439, 344, -97...]</span>
+    <span>Obs: 259</span> ·
+    <span>Last scan: 18-08 21:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T210051.json#rank[99]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/A48KeWUuiDSdRQBqAFssgyYATDuBv7cer54V2JSDpump" target="_blank" rel="noopener noreferrer">CALLOOOR</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah</span>
-    <span>Obs: 257</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [1174, 582, -544, 36, -4...]</span>
+    <span>Obs: 257</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL" target="_blank" rel="noopener noreferrer">App</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah</span>
-    <span>Obs: 252</span> |
-    <span>Last scan: 18-08 21:00 WIB</span> |
-    <span>Deltas: [33, -27, -6, -20, -7...]</span>
+    <span>Obs: 252</span> ·
+    <span>Last scan: 18-08 21:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T210051.json#rank[96]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/EUB1eZBt4m3X4FbperWnKGJdvLsuLMu2YmJix5yjpump" target="_blank" rel="noopener noreferrer">K-HOME</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 246</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [343, -159, -17, -36, -100...]</span>
+    <span>Obs: 246</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[88]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/9sfCHMLWSVy6MD6zr7pR1gD3qbT7C6K1E3dMf2ZBpump" target="_blank" rel="noopener noreferrer">LAYOOO</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 233</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [1, -1, -4, -10, -4...]</span>
+    <span>Obs: 233</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[73]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/488SaFq6wHF2z2k6NLSD3PtoSkXDNZaPkJwxze11pump" target="_blank" rel="noopener noreferrer">MOMO</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah</span>
-    <span>Obs: 219</span> |
-    <span>Last scan: 18-08 19:30 WIB</span> |
-    <span>Deltas: [155, 914, 225, 45, 64...]</span>
+    <span>Obs: 219</span> ·
+    <span>Last scan: 18-08 19:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T193042.json#rank[98]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/GRehQKv9E3fVuNJGQTwAAjYpcixRCYKkzAXAb5kGpump" target="_blank" rel="noopener noreferrer">BOIÚNA</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 212</span> |
-    <span>Last scan: 18-08 14:30 WIB</span> |
-    <span>Deltas: [378, -77, -112, 141, -89...]</span>
+    <span>Obs: 212</span> ·
+    <span>Last scan: 18-08 14:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T143032.json#rank[83]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump" target="_blank" rel="noopener noreferrer">Qenis</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 210</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [209, 103, 341, 26, -64...]</span>
+    <span>Obs: 210</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[78]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/GPzpoXpD74E2C4CJNayuoyBqPQJEsPtdse3nhntrpump" target="_blank" rel="noopener noreferrer">LOOKSMAX</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 203</span> |
-    <span>Last scan: 18-08 20:00 WIB</span> |
-    <span>Deltas: [7, 96, -20, 9, -6...]</span>
+    <span>Obs: 203</span> ·
+    <span>Last scan: 18-08 20:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T200050.json#rank[86]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/G1iBvjhZ9wpGUZdQcvhRSqjow3x6xetsnmEBBMm1pump" target="_blank" rel="noopener noreferrer">PITCOIN</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah</span>
-    <span>Obs: 199</span> |
-    <span>Last scan: 18-08 19:00 WIB</span> |
-    <span>Deltas: [325, 633, -591, -341, -137...]</span>
+    <span>Obs: 199</span> ·
+    <span>Last scan: 18-08 19:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T190043.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/FPfi9q1AixdUeWQVPFHJMJQ7a43S78dm6UZ4fzN4pump" target="_blank" rel="noopener noreferrer">nosis</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 198</span> |
-    <span>Last scan: 18-08 18:00 WIB</span> |
-    <span>Deltas: [56, -46, -4, 29, 25...]</span>
+    <span>Obs: 198</span> ·
+    <span>Last scan: 18-08 18:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T180047.json#rank[99]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/EjD5Y9NVhXmtEqU7wYvAyZvDWZFQeEuHXFatJmTbpump" target="_blank" rel="noopener noreferrer">lickingcat</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 191</span> |
-    <span>Last scan: 18-08 18:30 WIB</span> |
-    <span>Deltas: [-4, -20, -7, -6, 3...]</span>
+    <span>Obs: 191</span> ·
+    <span>Last scan: 18-08 18:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T183046.json#rank[93]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/GDPtXowyiXHjsHXgkwM1erpFufPEeNvqK8iGq71Bpump" target="_blank" rel="noopener noreferrer">Niles</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 191</span> |
-    <span>Last scan: 18-08 16:30 WIB</span> |
-    <span>Deltas: [89, 537, 555, -137, -234...]</span>
+    <span>Obs: 191</span> ·
+    <span>Last scan: 18-08 16:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T163035.json#rank[91]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/94Sm8joZMSRzpQmcNVn5zZpgnRLN2DBesJYDXwuNpump" target="_blank" rel="noopener noreferrer">omo</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 188</span> |
-    <span>Last scan: 18-08 19:00 WIB</span> |
-    <span>Deltas: [-4, -20, -5, -4, 3...]</span>
+    <span>Obs: 188</span> ·
+    <span>Last scan: 18-08 19:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T190043.json#rank[97]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/9cRCn9rGT8V2imeM2BaKs13yhMEais3ruM3rPvTGpump" target="_blank" rel="noopener noreferrer">ANSEM</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 185</span> |
-    <span>Last scan: 18-08 19:30 WIB</span> |
-    <span>Deltas: [28, 156, 125, -9, -19...]</span>
+    <span>Obs: 185</span> ·
+    <span>Last scan: 18-08 19:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T193042.json#rank[96]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Dmkj4dB3Ngva9gWKkDgj8UMF39EC7ArpGf2rxLxDpump" target="_blank" rel="noopener noreferrer">FTR</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah</span>
-    <span>Obs: 180</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [688, -341, 164, -77, -61...]</span>
+    <span>Obs: 180</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[92]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/DKxHTQCvDKUke1WpsHgbfueuRiTMqdzXrWeFHPvzpump" target="_blank" rel="noopener noreferrer">奶蛙</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 160</span> |
-    <span>Last scan: 18-08 19:30 WIB</span> |
-    <span>Deltas: [-1, -8, 0, 5, 1...]</span>
+    <span>Obs: 160</span> ·
+    <span>Last scan: 18-08 19:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T193042.json#rank[94]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4kjruqGHDsSqkMdFfCjV7Vb62HPFhtXyWc2t6JpQzDnz" target="_blank" rel="noopener noreferrer">GTA6</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 158</span> |
-    <span>Last scan: 18-08 21:00 WIB</span> |
-    <span>Deltas: [1593, 23, 197, 47, 2...]</span>
+    <span>Obs: 158</span> ·
+    <span>Last scan: 18-08 21:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T210051.json#rank[87]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Gepjas79VptWRYEVM4cUvET9RAyEEFrF4XhukZakpump" target="_blank" rel="noopener noreferrer">GENTLE</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 145</span> |
-    <span>Last scan: 18-08 16:30 WIB</span> |
-    <span>Deltas: [-3, -2, 23, 620, -87...]</span>
+    <span>Obs: 145</span> ·
+    <span>Last scan: 18-08 16:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T163035.json#rank[97]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/C6ASDsxzqBvF5bCQFVAGMRWwfgZNhfozbb9DkgiKpump" target="_blank" rel="noopener noreferrer">ORANGE</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 134</span> |
-    <span>Last scan: 16-08 09:30 WIB</span> |
-    <span>Deltas: [185, 135, 70, 79, 86...]</span>
+    <span>Obs: 134</span> ·
+    <span>Last scan: 16-08 09:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260816T093041.json#rank[88]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/DTGWeDVPAvr7TdY7sdbfjz2bi4QihVMMn9KhyKH1pump" target="_blank" rel="noopener noreferrer">WOFL</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 127</span> |
-    <span>Last scan: 18-08 19:30 WIB</span> |
-    <span>Deltas: [481, 411, -301, 88, -6...]</span>
+    <span>Obs: 127</span> ·
+    <span>Last scan: 18-08 19:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T193042.json#rank[91]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/E3i7sTY5QYEBh3itepnomZQt7Eh5kzmHFk1vkm2pump" target="_blank" rel="noopener noreferrer">cc</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 125</span> |
-    <span>Last scan: 18-08 13:30 WIB</span> |
-    <span>Deltas: [146, 769, 18, -69, -42...]</span>
+    <span>Obs: 125</span> ·
+    <span>Last scan: 18-08 13:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T133031.json#rank[87]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/7rMnp9EJd61SvNn8LGc7SAJeQxM36oeECKmP2a7opump" target="_blank" rel="noopener noreferrer">KIO</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 124</span> |
-    <span>Last scan: 18-08 16:30 WIB</span> |
-    <span>Deltas: [3, -6, 2, -15, -2...]</span>
+    <span>Obs: 124</span> ·
+    <span>Last scan: 18-08 16:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T163035.json#rank[98]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4CmYEygEusR76TpjxUbTjSLjyDbCMjxKhRKNozkrpump" target="_blank" rel="noopener noreferrer">BOB</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 110</span> |
-    <span>Last scan: 17-08 01:30 WIB</span> |
-    <span>Deltas: [380, -95, -79, 188, 349...]</span>
+    <span>Obs: 110</span> ·
+    <span>Last scan: 17-08 01:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T013006.json#rank[90]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/GJaxyLPuZh5U2U4LgAVdGGC6KYRVXZp8t91P2vzaCHAM" target="_blank" rel="noopener noreferrer">CHAM</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 108</span> |
-    <span>Last scan: 17-08 14:00 WIB</span> |
-    <span>Deltas: [7, -122, -2, 293, 1778...]</span>
+    <span>Obs: 108</span> ·
+    <span>Last scan: 17-08 14:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T140025.json#rank[93]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/3fqify4QnaKFsvmFVqmLMUHaRKdiPki6w2H3GyDmpump" target="_blank" rel="noopener noreferrer">Bark</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 106</span> |
-    <span>Last scan: 17-08 20:00 WIB</span> |
-    <span>Deltas: [-5, -12, 3, -18, 0...]</span>
+    <span>Obs: 106</span> ·
+    <span>Last scan: 17-08 20:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T200014.json#rank[98]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/BjbDYig3EfGdsdiFkAqjMHRNzKVLfLBdpmjC4eswpump" target="_blank" rel="noopener noreferrer">splashdog</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 100</span> |
-    <span>Last scan: 17-08 15:30 WIB</span> |
-    <span>Deltas: [0, 2, 7, 42, 6...]</span>
+    <span>Obs: 100</span> ·
+    <span>Last scan: 17-08 15:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T153027.json#rank[83]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Ezft93o4o9vbhn6tf1QXYjR8C7tvto3YKahXPZR8pump" target="_blank" rel="noopener noreferrer">牛来</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 96</span> |
-    <span>Last scan: 18-08 18:30 WIB</span> |
-    <span>Deltas: [-7, 287, -78, -21, 0...]</span>
+    <span>Obs: 96</span> ·
+    <span>Last scan: 18-08 18:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T183046.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/BVEaDToN2Ufn8m1Jnqy8rtwwCiiMC7JcFtvmKPxTpump" target="_blank" rel="noopener noreferrer">GTA</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 94</span> |
-    <span>Last scan: 16-08 20:31 WIB</span> |
-    <span>Deltas: [1497, 917, 451, -129, -105...]</span>
+    <span>Obs: 94</span> ·
+    <span>Last scan: 16-08 20:31 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260816T203102.json#rank[81]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6zjLjqd483pWwrowtKdyhie8tqEvkWwRcrR4btkVpump" target="_blank" rel="noopener noreferrer">expensive</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 90</span> |
-    <span>Last scan: 17-08 16:00 WIB</span> |
-    <span>Deltas: [-16, 116, -11, -15, -37...]</span>
+    <span>Obs: 90</span> ·
+    <span>Last scan: 17-08 16:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T160037.json#rank[96]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/tpg7sWJPSKijHqPqtpHY2BWBEUq1RwGxmJpD8Tppump" target="_blank" rel="noopener noreferrer">PUMPGUY</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 88</span> |
-    <span>Last scan: 18-08 16:00 WIB</span> |
-    <span>Deltas: [-2, 2, -6, 4, 0...]</span>
+    <span>Obs: 88</span> ·
+    <span>Last scan: 18-08 16:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T160045.json#rank[98]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4xMegMRMd2TFQEXxv39vtMP1r5fFVuA7VcaSmAhLpump" target="_blank" rel="noopener noreferrer">GUNICORN</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 85</span> |
-    <span>Last scan: 18-08 19:30 WIB</span> |
-    <span>Deltas: [68, 606, 5311, -488, -651...]</span>
+    <span>Obs: 85</span> ·
+    <span>Last scan: 18-08 19:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T193042.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/G6tz2XwqKK6HmYfjos9RLwPNvoEVd4hntbm4PSZapump" target="_blank" rel="noopener noreferrer">Regulardude</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 79</span> |
-    <span>Last scan: 15-08 14:30 WIB</span> |
-    <span>Deltas: [20, -111, 19, -375, -28...]</span>
+    <span>Obs: 79</span> ·
+    <span>Last scan: 15-08 14:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260815T143005.json#rank[86]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HSZCUrkyJspqMAUrrKr4kSC7j9cKadqVVo4xTyFG7mDi" target="_blank" rel="noopener noreferrer">KYOKO</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↑ NAIK</span>
-    <span>Obs: 78</span> |
-    <span>Last scan: 17-08 19:01 WIB</span> |
-    <span>Deltas: [-2, 11, -10, 250, 66...]</span>
+    <span>Obs: 78</span> ·
+    <span>Last scan: 17-08 19:01 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T190108.json#rank[95]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/5kr3KPg6Nhx2cBvunCuEgnUnJzRRz7C56aKNaFMmpump" target="_blank" rel="noopener noreferrer">Shitcoin</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 74</span> |
-    <span>Last scan: 14-08 14:00 WIB</span> |
-    <span>Deltas: [-1, 24, 7, 6, 2...]</span>
+    <span>Obs: 74</span> ·
+    <span>Last scan: 14-08 14:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260814T140007.json#rank[92]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Ct7ZFjNZ1AsjdHnzvejxzWm33kY45mUSTqdSFzAiHfoD" target="_blank" rel="noopener noreferrer">Bichoraro</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 67</span> |
-    <span>Last scan: 17-08 05:00 WIB</span> |
-    <span>Deltas: [249, 440, 111, 254, 1...]</span>
+    <span>Obs: 67</span> ·
+    <span>Last scan: 17-08 05:00 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260817T050016.json#rank[99]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/7ZgRjHSnjDqc73mYitJZ4NAAVtdWrTyQEnoXB6Kfpump" target="_blank" rel="noopener noreferrer">apes</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 66</span> |
-    <span>Last scan: 14-08 11:30 WIB</span> |
-    <span>Deltas: [1240, 966, 564, -24, 162...]</span>
+    <span>Obs: 66</span> ·
+    <span>Last scan: 14-08 11:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260814T113058.json#rank[98]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/2WDjdDj6W1PJpQ8ea4nXZ95VFKNko18DtGYzqUuipump" target="_blank" rel="noopener noreferrer">BILLY</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 66</span> |
-    <span>Last scan: 18-08 21:30 WIB</span> |
-    <span>Deltas: [-5, -33, 346, 883, 866...]</span>
+    <span>Obs: 66</span> ·
+    <span>Last scan: 18-08 21:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260818T213052.json#rank[77]</div>
 </div>
 
 <div class="mom">
   <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/AvecKFxn8ihToR7gwgAVjfqV56N1rWhN7hv8joXQpump" target="_blank" rel="noopener noreferrer">COGE</a></div>
   <div class="mlab">
     <span class="badge res" title="Arah berubah: tadinya naik lalu turun (atau sebaliknya). Belum tentu jelek, tapi arah terakhir lawan arah sebelumnya.">↔ BERBALIK arah ↓ TURUN</span>
-    <span>Obs: 65</span> |
-    <span>Last scan: 16-08 16:30 WIB</span> |
-    <span>Deltas: [277, 23, 340, 6, 164...]</span>
+    <span>Obs: 65</span> ·
+    <span>Last scan: 16-08 16:30 WIB</span>
   </div>
-  <div class="ctag">ref: holder_raw/rank_20260816T163055.json#rank[74]</div>
 </div>
 </section>
   
 <section id="history" class="tab">
-  <h2>🕒 SCAN HISTORY <span class="badge live">🟢 EVERY 4H</span></h2>
+  <h2>🕒 4H HISTORY <span class="badge live">🟢 EVERY 4H</span></h2>
   <div class="sub">selected tokens per scan · click = GMGN</div>
   
   <div class="scan">
@@ -1215,9 +1108,20 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <button class="loadmore" id="hist-more">⬇️ LOAD MORE / OLDER SCANS</button>
 </section>
   
+<section id="shadow5m" class="tab">
+  <h2>🚨 SHADOW 5M <span class="badge res">🟡 RESEARCH ONLY · NOT BUY SIGNAL</span></h2>
+  <div class="sub">panggilan shadow scanner 5m existing · observasi — edge belum diklaim · terpisah dari 4H HISTORY</div>
+  <div class="mom">
+    <div class="vhead">LATEST (5)</div>
+    <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Bapyr2ew7jZ4tqjpS8pth7aNXCvQtnhuiNMwK3xxE4Zm" target="_blank" rel="noopener noreferrer">Image</a> · SCR 42 · <span class="badge nodata">LOW</span> · MC $42,543 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Bi9vuVTxBgqT3pT8E7SAnTuwzTsFKVZCvjRN25SSpump" target="_blank" rel="noopener noreferrer">MIKO</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $19,022 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/3vjQAhYhus9Sff1Pc8xiANh6pKhRUEi9JC5AHYGaWX9t" target="_blank" rel="noopener noreferrer">NIKE</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $5,552 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/8hdyHPyxu5f1iG4XkwxpQn8ge8LsUrhxwtCHszrSpump" target="_blank" rel="noopener noreferrer">SLE</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $3,339 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CYb7JyLwmhSMe3CjUPGxbrP3niWvPDtiC1wtGR8Jpump" target="_blank" rel="noopener noreferrer">Bunny</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $8,076 · 18-08 21:55 WIB</div>
+    <div class="vhead" style="margin-top:14px">HISTORY (30 older)</div>
+    <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/J2CAbtSqBjHRAHrgTUVhPEVcTyH6EQYbnDgwVax6pump" target="_blank" rel="noopener noreferrer">Hermano</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,808 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CcWVFqrwzkEdHH1YpfZRjkdbKrxYQbU9BRqeC6ZGpump" target="_blank" rel="noopener noreferrer">ANSEMIUS</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $25,915 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/388d1grAEt8bTzTW4g5UrkJwitDQ4TTKbVBUPYfopump" target="_blank" rel="noopener noreferrer">USB</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,541 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4QrWH4GKuif9abEVYE7DixdJkU7SemD9wa7Dbokppump" target="_blank" rel="noopener noreferrer">NORMAL</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $2,415 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6QnH5vD1ZXezYEjUCcrTk8eDSfLxuwEPV3kQ97dspump" target="_blank" rel="noopener noreferrer">Image</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $27,408 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/ANkGRZzPBjtDp3MxXpQNW1NcAYREGzdroCCcaNG5pump" target="_blank" rel="noopener noreferrer">Lumio</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,484 · 18-08 21:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/5eSJUpihcef3UYB2MNKku8UZA3v95pbrWDibZSe9pump" target="_blank" rel="noopener noreferrer">NORMAL</a> · SCR 31 · <span class="badge nodata">LOW</span> · MC $21,184 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/82c949QyXN9ziLsAhPyGXW39rDj1ZsdLQAv9fCjXpump" target="_blank" rel="noopener noreferrer">Luka</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $4,789 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/5vFLJANo7aB3EMEvKDjLSsnxJnWFXF2CP7QaZCjKpump" target="_blank" rel="noopener noreferrer">DMT</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $2,571 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/65w43MrTpxdHtX2qgSs5jzzSomTTrR7NgdXkTzwKpump" target="_blank" rel="noopener noreferrer">DogFan</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $12,785 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HPEqFRP2wp9RJzTsafbwUchq7nRFgg2NdbRtAyE2pump" target="_blank" rel="noopener noreferrer">seadog</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $4,393 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CMSqjACTfSYB8Qg2ZF2pz61GrvNBekfoXGmMtP7Gpump" target="_blank" rel="noopener noreferrer">TURNING</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $11,857 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Bk36sjvP1GjARcYaGgCX2mgsYf8coXZcq4iwJAuUpump" target="_blank" rel="noopener noreferrer">G PIG</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $6,443 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/H9S9qFsRNck2Kp3jKxkgW6uZenEWqsicDQ3WtyGpump" target="_blank" rel="noopener noreferrer">MASSAGECATS</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $7,364 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4UnMzLCWToh29KvetKUVLw1yQFRQDDWPpwrGjQZ7pump" target="_blank" rel="noopener noreferrer">LLMCoin</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $4,340 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/24P2GKPn9sG5pajA6odu8Ncopk62TScTAUnwySSrqLq1" target="_blank" rel="noopener noreferrer">DNA</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $6,981 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/9cbwHUkiE11FUpopU7KQC4GhsJidhNN8Xmsuo6rjpump" target="_blank" rel="noopener noreferrer">意识种子</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $3,064 · 18-08 21:50 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/F6HD4wxw2Nv3UZZgJKYz32uRpC7MUVM68w5fmiWbpump" target="_blank" rel="noopener noreferrer">smallcap</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $3,051 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/H9r8dVhszRLUsdc8LjxUP2UABuGMYWsCpfWcEGrapump" target="_blank" rel="noopener noreferrer">ONKEY</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $2,809 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Dtoz9eFU6orYN2ZBvSFNDWJzJTnJkT1yVDjizTFbpump" target="_blank" rel="noopener noreferrer">degen</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $11,030 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CGP5BHoxnJMZpDNm3dKJnHZrPFbRLBf8pQ8zAhFLpump" target="_blank" rel="noopener noreferrer">PEPE</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $2,420 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6yerhkU7EitSjAr8wcSezD2DgqZreGrrib2Kv9rvpump" target="_blank" rel="noopener noreferrer">PEPE</a> · SCR 46 · <span class="badge nodata">LOW</span> · MC $441,047 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/9kKy3Q8rHTcLTqUZX33M2rN4Wh5LxjK1wiaA6GCipump" target="_blank" rel="noopener noreferrer">meaningless</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $3,377 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/BYh8yraJPYtngRsQ16gfmFaA6UmiKvb6Q6f184zEpump" target="_blank" rel="noopener noreferrer">Gary</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $5,135 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/EvR6ZXJub9xGsPYNfsLe3xcWP3j3hfouts6iKcUzpump" target="_blank" rel="noopener noreferrer">HAMSTER</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,334 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/G93EkCbMEm5pusi8rXuc6QvPDJ6YTmJVuPjRVt1Bpump" target="_blank" rel="noopener noreferrer">Migrant</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,260 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/F9RteAMpFG5ejoWZqEGKWykiB58Bwo71iQ3erb6Qpump" target="_blank" rel="noopener noreferrer">67GIRLS</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $6,313 · 18-08 21:45 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/4vJAxpw3LwzTJtzNCkhDjzz5nwokhJrkk8uRPvsRAnCQ" target="_blank" rel="noopener noreferrer">KeffeD</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $2,297 · 18-08 21:40 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/8dyxma7zNwqSRg24YHu3ioYnMdkRh5v6mNoaTZcNpump" target="_blank" rel="noopener noreferrer">LLM</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $9,756 · 18-08 21:40 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/8rfwKyybVhx6XRjTws5WcJXn3hxnyUnPip4uDUbE2Th6" target="_blank" rel="noopener noreferrer">Opifex</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $18,174 · 18-08 21:40 WIB</div>
+  </div>
+</section>
+  
 <section id="momentum" class="tab">
   <h2>⚡️ MOMENTUM <span class="badge res">🟡 RESEARCH</span></h2>
-  <div class="sub">observasi momentum · bukan BUY</div>
+  <div class="sub">holder/TX/volume momentum observation dari cohort RADAR yang sama (lensa berbeda, bukan seleksi baru) · bukan BUY</div>
   
   <div class="mom">
     <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/9wjfCUrZGq5n9od9UaZzY44uU5pRsojGJRtSKyTGpump" target="_blank" rel="noopener noreferrer">RDDT</a></div>
@@ -1312,30 +1216,24 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;15</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;9</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;6</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;2</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;13</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
     <div class="card">
       <div class="cname">RETURN (valid-price)</div>
-      <div class="crow">Median&nbsp;&nbsp;-0.4%</div>
-      <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;11%</div>
+      <div class="crow">Median&nbsp;&nbsp;-0.1%</div>
+      <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;50%</div>
       <div class="ctag">N&lt;30 = INCONCLUSIVE</div>
     </div>
     <div class="card">
-      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/9sfCHMLWSVy6MD6zr7pR1gD3qbT7C6K1E3dMf2ZBpump" target="_blank" rel="noopener noreferrer">LAYOOO</a> +0.5%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/46vV3ZpFNLZn1CDRYnAvqPsdW5ejEYn9GK9kPcZFpump" target="_blank" rel="noopener noreferrer">honse</a> -0.1%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx" target="_blank" rel="noopener noreferrer">STONK</a> -0.2%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/G1iBvjhZ9wpGUZdQcvhRSqjow3x6xetsnmEBBMm1pump" target="_blank" rel="noopener noreferrer">PITCOIN</a> -0.3%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/BjbDYig3EfGdsdiFkAqjMHRNzKVLfLBdpmjC4eswpump" target="_blank" rel="noopener noreferrer">splashdog</a> -0.4%</div>
+      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/9sfCHMLWSVy6MD6zr7pR1gD3qbT7C6K1E3dMf2ZBpump" target="_blank" rel="noopener noreferrer">LAYOOO</a> +0.7%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/BmDWM5NYWWZm4P2qBrhBNb6jbxsN3estLAkaWg8dpump" target="_blank" rel="noopener noreferrer">Frock</a> -0.8%</div>
     </div>
     <div class="card">
-      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DTGWeDVPAvr7TdY7sdbfjz2bi4QihVMMn9KhyKH1pump" target="_blank" rel="noopener noreferrer">WOFL</a> -0.9%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6HjvVo8yHNR4fLH3E2fXDACPvsc8mAtuuRRJagmQpump" target="_blank" rel="noopener noreferrer">Layoo</a> -0.9%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/BmDWM5NYWWZm4P2qBrhBNb6jbxsN3estLAkaWg8dpump" target="_blank" rel="noopener noreferrer">Frock</a> -0.8%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/LFEJTxJ9yi6ojGDFpjbGfABLbH55Fc3oEK8syJJpump" target="_blank" rel="noopener noreferrer">DPG</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/BjbDYig3EfGdsdiFkAqjMHRNzKVLfLBdpmjC4eswpump" target="_blank" rel="noopener noreferrer">splashdog</a> -0.4%</div>
+      <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/BmDWM5NYWWZm4P2qBrhBNb6jbxsN3estLAkaWg8dpump" target="_blank" rel="noopener noreferrer">Frock</a> -0.8%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/9sfCHMLWSVy6MD6zr7pR1gD3qbT7C6K1E3dMf2ZBpump" target="_blank" rel="noopener noreferrer">LAYOOO</a> +0.7%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
@@ -1381,7 +1279,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <div class="warn">ma_ok 0 = harga belum cukup / volume terlalu kecil / gagal ambil data (limit API). Token tetap tampil apa adanya — tidak dikarang.</div>
   
 <section class="scan" data-scan>
-  <div class="scan-h"><span>📊 MA50_15m</span><span class="meta">NO MA DATA · 5 shown</span></div>
+  <div class="scan-h"><span>📊 MA50_15m</span><span class="meta">NO MA DATA · 3 shown</span></div>
   <div class="detail">
     <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 10</div>
     <div class="grid">
@@ -1407,27 +1305,11 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="crow">hanya 6 bar < MA50</div>
     <div class="crow">vol $759,518 · tf 15m · MA50</div>
     <div class="ctag">5P3D…mCWH</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/5Gy42BNSpXab5iMWBZAsMj27uZavNqC7MYGrBKvJpump" target="_blank" rel="noopener noreferrer">42coin</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 7 bar < MA50</div>
-    <div class="crow">vol $196,001 · tf 15m · MA50</div>
-    <div class="ctag">5Gy4…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/FJTNSWBpQF7FSQQgC2mrLQGvmR1tgvCDERE46KNhpump" target="_blank" rel="noopener noreferrer">Plume</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 4 bar < MA50</div>
-    <div class="crow">vol $186,740 · tf 15m · MA50</div>
-    <div class="ctag">FJTN…pump</div>
   </div></div>
   </div>
 </section>
 <section class="scan" data-scan>
-  <div class="scan-h"><span>📊 MA200_15m</span><span class="meta">NO MA DATA · 5 shown</span></div>
+  <div class="scan-h"><span>📊 MA200_15m</span><span class="meta">NO MA DATA · 3 shown</span></div>
   <div class="detail">
     <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 6 · FETCH:OHLCV:RETRY_EXHAUSTED 3 · FETCH:POOL:RETRY_EXHAUSTED 1</div>
     <div class="grid">
@@ -1453,27 +1335,11 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="crow">hanya 5 bar < MA200</div>
     <div class="crow">vol $186,740 · tf 15m · MA200</div>
     <div class="ctag">FJTN…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/6qJ3ygeR2DMe5ZV25V1ZEZMBRStPEDAgXwYghfo2pump" target="_blank" rel="noopener noreferrer">Gale</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 7 bar < MA200</div>
-    <div class="crow">vol $135,808 · tf 15m · MA200</div>
-    <div class="ctag">6qJ3…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/3F7srbn7bx1kT2z5eJQgckwUjK3SUs5ji7D6nvRgpump" target="_blank" rel="noopener noreferrer">VIRUS</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 4 bar < MA200</div>
-    <div class="crow">vol $86,525 · tf 15m · MA200</div>
-    <div class="ctag">3F7s…pump</div>
   </div></div>
   </div>
 </section>
 <section class="scan" data-scan>
-  <div class="scan-h"><span>📊 MA200_30m</span><span class="meta">NO MA DATA · 5 shown</span></div>
+  <div class="scan-h"><span>📊 MA200_30m</span><span class="meta">NO MA DATA · 3 shown</span></div>
   <div class="detail">
     <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 10</div>
     <div class="grid">
@@ -1499,27 +1365,11 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="crow">hanya 2 bar < MA200</div>
     <div class="crow">vol $405,569 · tf 30m · MA200</div>
     <div class="ctag">4bXN…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/21evp1ZzcbYzk1ESzH78cghjbfr4PgkCyCcF5pQ4pump" target="_blank" rel="noopener noreferrer">サンナ</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 2 bar < MA200</div>
-    <div class="crow">vol $399,837 · tf 30m · MA200</div>
-    <div class="ctag">21ev…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/3ZQyLyzEFYWDejNFPX6e1EreEjBaG661nfnNPTUupump" target="_blank" rel="noopener noreferrer">RADON</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 2 bar < MA200</div>
-    <div class="crow">vol $266,860 · tf 30m · MA200</div>
-    <div class="ctag">3ZQy…pump</div>
   </div></div>
   </div>
 </section>
 <section class="scan" data-scan>
-  <div class="scan-h"><span>📊 MA50_1h</span><span class="meta">NO MA DATA · 5 shown</span></div>
+  <div class="scan-h"><span>📊 MA50_1h</span><span class="meta">NO MA DATA · 3 shown</span></div>
   <div class="detail">
     <div class="ie">cohort 10 token · ma_ok 0 · dq: VOL_UNDER_THRESHOLD 9 · INSUFFICIENT_HISTORY 1</div>
     <div class="grid">
@@ -1545,27 +1395,11 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="crow"></div>
     <div class="crow">vol — · tf — · MA—</div>
     <div class="ctag">4bXN…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/3ZQyLyzEFYWDejNFPX6e1EreEjBaG661nfnNPTUupump" target="_blank" rel="noopener noreferrer">RADON</a></div>
-    <div class="crow warn">VOL_UNDER_THRESHOLD</div>
-    <div class="crow"></div>
-    <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">3ZQy…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/UxbEbJpwXnBo6WbPTQa9qyrjhbeQ6Jidjs1XRm2pump" target="_blank" rel="noopener noreferrer">NICE</a></div>
-    <div class="crow warn">VOL_UNDER_THRESHOLD</div>
-    <div class="crow"></div>
-    <div class="crow">vol — · tf — · MA—</div>
-    <div class="ctag">UxbE…pump</div>
   </div></div>
   </div>
 </section>
 <section class="scan" data-scan>
-  <div class="scan-h"><span>📊 MA50_4h</span><span class="meta">NO MA DATA · 5 shown</span></div>
+  <div class="scan-h"><span>📊 MA50_4h</span><span class="meta">NO MA DATA · 3 shown</span></div>
   <div class="detail">
     <div class="ie">cohort 10 token · ma_ok 0 · dq: INSUFFICIENT_HISTORY 10</div>
     <div class="grid">
@@ -1591,22 +1425,6 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
     <div class="crow">hanya 1 bar < MA50</div>
     <div class="crow">vol $405,569 · tf 4h · MA50</div>
     <div class="ctag">4bXN…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/21evp1ZzcbYzk1ESzH78cghjbfr4PgkCyCcF5pQ4pump" target="_blank" rel="noopener noreferrer">サンナ</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 1 bar < MA50</div>
-    <div class="crow">vol $399,837 · tf 4h · MA50</div>
-    <div class="ctag">21ev…pump</div>
-  </div>
-
-  <div class="card">
-    <div class="cname"><a class="tok" href="https://gmgn.ai/sol/token/3ZQyLyzEFYWDejNFPX6e1EreEjBaG661nfnNPTUupump" target="_blank" rel="noopener noreferrer">RADON</a></div>
-    <div class="crow warn">INSUFFICIENT_HISTORY</div>
-    <div class="crow">hanya 1 bar < MA50</div>
-    <div class="crow">vol $266,860 · tf 4h · MA50</div>
-    <div class="ctag">3ZQy…pump</div>
   </div></div>
   </div>
 </section>
@@ -1615,9 +1433,10 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <div class="mom"><p class="empty">Belum ada token di ≥2 cohort dengan dq OK (MA belum dapat cukup bar).</p></div>
 </section>
 <div class="navbar">
-  <span data-tab="radar" class="active">🔥 Radar</span>
+<span data-tab="radar" class="active">🔥 Radar</span>
   <span data-tab="flow">🌊 Flow</span>
-  <span data-tab="history">🕒 Hist</span>
+  <span data-tab="history">🕒 4H</span>
+  <span data-tab="shadow5m">🚨 Shadow</span>
   <span data-tab="momentum">⚡️ Mom</span>
   <span data-tab="setup">📈 Setup</span>
   <span data-tab="security">🛡 Sec</span>
@@ -1625,6 +1444,7 @@ h2 { font-size:16px; margin-bottom:4px; display:flex; align-items:center; gap:8p
   <span data-tab="paper">📝 Paper</span>
   <span data-tab="sim">🧪 SIM</span>
   <span data-tab="maresearch">🧪 MA</span>
+  <a href="https://kingvavasav.github.io/holder-health/" target="_blank" rel="noopener">🩺 Health</a>
 </div>
 <script>
 function show(t){
@@ -1648,14 +1468,5 @@ if(lm) lm.addEventListener('click',function(e){e.stopPropagation();
   if(!document.querySelector('#history .scan[hidden]')) lm.remove();
 });
 </script>
-
-<footer class="ftr">
-  <div class="flab">RESEARCH LIFECYCLE</div>
-  <span class="badge res">C · 🟡 HYPOTHESIS</span>
-  <span class="badge ins">D · 🔴 REJECTED/DROPPED</span>
-  <span class="badge res">C-SHADOW · 🟡 SHADOW (55 CA)</span>
-  <span class="badge frozen">PRODUCTION · 🔒 FROZEN</span>
-  <span class="badge frozen">BUY/THRESHOLD · 🔒 FROZEN</span>
-</footer>
 </body>
 </html>
