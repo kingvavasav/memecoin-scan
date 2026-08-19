@@ -34,13 +34,36 @@ html,body{margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe
 a{color:#3498db;text-decoration:none}
 a:hover{text-decoration:underline}
 @media(max-width:400px){.hdr{padding:8px 10px}.nav{padding:6px 10px}.tab{padding:10px}.card{padding:10px}}
-</style>
+
+/* Tab switching */
+.tab{display:none}
+.tab.active{display:block}
+
+/* Script for tab switching */</style>
+
+<script>
+(function(){
+  var pills = document.querySelectorAll('.pill');
+  pills.forEach(function(p){
+    if(p.tagName === 'A') return; // Skip external links (HEALTH)
+    p.addEventListener('click', function(){
+      var tabId = this.getAttribute('data-tab');
+      if(!tabId) return;
+      document.querySelectorAll('.tab').forEach(function(t){t.classList.remove('active')});
+      var target = document.getElementById(tabId);
+      if(target) target.classList.add('active');
+      pills.forEach(function(p){p.classList.remove('active')});
+      this.classList.add('active');
+    });
+  });
+})();
+</script>
 </head>
 <body>
 
 <header class="hdr">
   <div class="title">MEMECOIN SCAN</div>
-  <div class="sysline"><span class="dot warn">🟡</span> STALE &nbsp;·&nbsp; 📅 Data as-of: 19-08 14:58 WIB &nbsp;·&nbsp; gen 19-08 18:01 WIB &nbsp;·&nbsp; radar 183m lalu</div>
+  <div class="sysline"><span class="dot warn">🟡</span> STALE &nbsp;·&nbsp; 📅 Data as-of: 19-08 14:58 WIB &nbsp;·&nbsp; gen 19-08 18:10 WIB &nbsp;·&nbsp; radar 192m lalu</div>
 </header>
 <nav class="nav" role="navigation" aria-label="Main sections">
 <span class="pill active" data-tab="radar">🔥 RADAR</span>
@@ -579,7 +602,7 @@ a:hover{text-decoration:underline}
   <h2>🚨 SHADOW LIVE <span class="badge res">🟡 RESEARCH ONLY · NOT BUY SIGNAL</span></h2>
   <div class="sub">latest shadow calls · 5M scanner</div>
   <div class="mom">
-    <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/8oupCR2Zf7aBqZzd7paeXAxjuw8FUj2uSifD6vxXpump" target="_blank" rel="noopener noreferrer">USEFUL</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $16,003 · 19-08 17:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/CbvkyT49XSXk9JEeBsrien97ycnWYwmoyRGmJrzK6kR8" target="_blank" rel="noopener noreferrer">Greg</a> · SCR 24 · <span class="badge nodata">LOW</span> · MC $10,669 · 19-08 17:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Bj1zQxDjKmesmpzqpaeA1wEigehQb3tuYaMz6K92pump" target="_blank" rel="noopener noreferrer">69</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,771 · 19-08 17:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/8KZhSTCKSLLMuBRAZDT4FohNmBBhdSS1aJT6DfrQpump" target="_blank" rel="noopener noreferrer">FISHBONE</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $16,191 · 19-08 17:55 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6Y3s9tuajYL47DitEmTKLex6gpnRRPpNkhTMRxwtpump" target="_blank" rel="noopener noreferrer">Greg</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $8,813 · 19-08 17:55 WIB</div>
+    <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/6CgP4yBUQA1F4dpCZsLjQnDTJ1Xo9F73n6C4nDGvpump" target="_blank" rel="noopener noreferrer">DRK</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $16,292 · 19-08 18:01 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/FCqVrXiNrdC6LqYrELiLMSGwAdj1UpfW9bdtqjc1pump" target="_blank" rel="noopener noreferrer">beanie</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $5,222 · 19-08 18:01 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/FPJHzMoLSPwHYHo3ouXagnXC7eZ85Puwp88LBynppump" target="_blank" rel="noopener noreferrer">DRK</a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $5,067 · 19-08 18:01 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HQawVrvK1m12tU9EeZDfTPkCcEsEZHTQAfWrWYuapump" target="_blank" rel="noopener noreferrer">SPERM </a> · SCR 14 · <span class="badge nodata">LOW</span> · MC $2,408 · 19-08 18:01 WIB</div><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/9KWwgE6zAU7Gx3wvwnH4rZpB91Ub2uyNvywuYkPRpump" target="_blank" rel="noopener noreferrer">Ika</a> · SCR 7 · <span class="badge nodata">LOW</span> · MC $6,400 · 19-08 18:01 WIB</div>
   </div>
 </section>
 
@@ -707,30 +730,26 @@ a:hover{text-decoration:underline}
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;15</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;5</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;10</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;3</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;12</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
     <div class="card">
       <div class="cname">RETURN (valid-price)</div>
-      <div class="crow">Median&nbsp;&nbsp;-0.7%</div>
-      <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;0%</div>
+      <div class="crow">Median&nbsp;&nbsp;-0.8%</div>
+      <div class="crow">Hit-rate (ret&gt;0)&nbsp;&nbsp;33%</div>
       <div class="ctag">N&lt;30 = INCONCLUSIVE</div>
     </div>
     <div class="card">
-      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx" target="_blank" rel="noopener noreferrer">STONK</a> -0.3%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/LFEJTxJ9yi6ojGDFpjbGfABLbH55Fc3oEK8syJJpump" target="_blank" rel="noopener noreferrer">DPG</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL" target="_blank" rel="noopener noreferrer">App</a> -0.7%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/HxQhDGYqyjorgogMJx7YbBHADEDxuHhLnMMmr6VYpyn" target="_blank" rel="noopener noreferrer">MANLET</a> -0.7%</div>
+      <div class="cname">🟢 WINNERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k" target="_blank" rel="noopener noreferrer">BULLSHIT</a> +1.7%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6U2Sebj6bVmVJemAZQmmUEGPtsa4wD877AzhbUuupump" target="_blank" rel="noopener noreferrer">Qenis</a> -0.8%</div>
 <div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/3AVnDM78wAWEY4JK5Z7yFP6svEKTqtsCq4jfsEwApump" target="_blank" rel="noopener noreferrer">frodo</a> -0.9%</div>
     </div>
     <div class="card">
       <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/3AVnDM78wAWEY4JK5Z7yFP6svEKTqtsCq4jfsEwApump" target="_blank" rel="noopener noreferrer">frodo</a> -0.9%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/HxQhDGYqyjorgogMJx7YbBHADEDxuHhLnMMmr6VYpyn" target="_blank" rel="noopener noreferrer">MANLET</a> -0.7%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL" target="_blank" rel="noopener noreferrer">App</a> -0.7%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/LFEJTxJ9yi6ojGDFpjbGfABLbH55Fc3oEK8syJJpump" target="_blank" rel="noopener noreferrer">DPG</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx" target="_blank" rel="noopener noreferrer">STONK</a> -0.3%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6U2Sebj6bVmVJemAZQmmUEGPtsa4wD877AzhbUuupump" target="_blank" rel="noopener noreferrer">Qenis</a> -0.8%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/zj1jpp7QMveWHLs61vL9KMZf254KvW7j4AAmBF8ry2k" target="_blank" rel="noopener noreferrer">BULLSHIT</a> +1.7%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
