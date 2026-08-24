@@ -56,20 +56,6 @@ a:hover{text-decoration:underline}
 .tab{display:none}
 .tab.active{display:block}
 
-/* whale cards: compact, mobile-safe, symbol is primary click target */
-.whale-card{border:1px solid #eee;border-radius:10px;padding:10px 12px;background:#fafafa;margin-bottom:10px;overflow:hidden;word-break:break-word}
-.wc-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
-.wc-sym{font-weight:700;font-size:15px;color:#1a5fb4;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.wc-sym:hover{text-decoration:underline}
-.wc-tag{font-weight:700;font-size:13px;white-space:nowrap;flex-shrink:0}
-.wc-tag .wt{color:#888;font-weight:600;font-size:11px;margin-right:2px}
-.wc-ca{font-size:11px;color:#888;margin-top:4px;font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.wc-row{font-size:13px;color:#444;margin-top:3px}
-.wc-meta{font-size:11px;color:#999;margin-top:4px}
-.wc-tx{color:#3498db}
-.wf{margin-left:6px;color:#155724}
-@media(max-width:400px){.whale-card{padding:9px 10px}.wc-sym{font-size:14px}.wc-tag{font-size:12px}}
-
 @media (prefers-color-scheme: dark){
   html,body{background:#111;color:#e6e6e6}
   .topbar,.hdr,.nav,.tab,.card,.ftr{background:#1c1c1c;border-color:#333}
@@ -79,17 +65,13 @@ a:hover{text-decoration:underline}
   .sysline,.sub,.empty,.badge{color:#999}
   .badge{background:#2a2a2a}
   a{color:#4aa3ff}
+  /* contrast fix: data rows were stuck at light-mode #444 on #111 (fails).
+     PRIMARY readable on dark; SECONDARY muted-but-legible. */
   .mrow{color:#d7dae0}
   .crow{color:#cfd3db}
   .mlab{color:#b9bec8;font-weight:600}
   .ctag{color:#9aa0ac}
   .empty{color:#9aa0ac}
-  .whale-card{background:#1c1c1c;border-color:#333}
-  .wc-sym{color:#6cb6ff}
-  .wc-ca,.wc-row{color:#cfd3db}
-  .wc-meta{color:#9aa0ac}
-  .wc-tx{color:#4aa3ff}
-  .wf{color:#5dd39e}
 }
 
 /* Script for tab switching */</style>
@@ -99,7 +81,7 @@ a:hover{text-decoration:underline}
 <div class="topbar">
 <header class="hdr">
   <div class="title">MEMECOIN SCAN</div>
-  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 24-08 16:00 WIB &nbsp;·&nbsp; gen 24-08 17:47 WIB &nbsp;·&nbsp; radar 107m lalu</div>
+  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 24-08 16:00 WIB &nbsp;·&nbsp; gen 24-08 17:49 WIB &nbsp;·&nbsp; radar 109m lalu</div>
 </header>
 <nav class="nav" role="navigation" aria-label="Main sections">
 <span class="pill primary active" data-tab="radar">🔥 RADAR</span>
@@ -6863,8 +6845,8 @@ a:hover{text-decoration:underline}
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;15</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;5</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;10</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;10</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;5</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
@@ -6879,10 +6861,10 @@ a:hover{text-decoration:underline}
     </div>
     <div class="card">
       <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6LeCYgva3n6LZUxEDc74CabngyGXDzbGRxi4pqxppump" target="_blank" rel="noopener noreferrer">BULL</a> -1.0%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/5AbfQ5tGU4YT1v5r43v8z9UeKmUZcXvMxGrCfsMXpump" target="_blank" rel="noopener noreferrer">NTP</a> -1.0%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/3kvZYBrBPEySFwQfXZGEvJSeMWRa6BkTS34suBEYpump" target="_blank" rel="noopener noreferrer">Dinger</a> -1.0%</div>
 <div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DShht9B8wCRe5t3oqdPB77PnjJbKxbYaZyuWpZQjbonk" target="_blank" rel="noopener noreferrer">CONK</a> -0.7%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/FpaX2T4x3UJr1Y3tLTcv48eGK23aT8uuBuTh614Fpump" target="_blank" rel="noopener noreferrer">RMC</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/EjAuFtMEP6LQDgLb11JU9bkcskhFYbgd9Q5NRXJppump" target="_blank" rel="noopener noreferrer">Doge2</a> -0.6%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DLhzqAWwE2YkPLdYvvWNMZ71vxZJQD2FByMfWFHppump" target="_blank" rel="noopener noreferrer">MAPLE</a> -0.2%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/FtateF34Xzawa91bpbVNdX72hZYo9cymRDYqBreHHbJi" target="_blank" rel="noopener noreferrer">PANTS</a> -0.6%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
@@ -7045,11 +7027,11 @@ a:hover{text-decoration:underline}
   <div id="spBody">
     <div class="card">
       <div class="mlab">PERIOD 7D</div>
-      <div class="mrow">CALLS 91 · MATURED 21 · TRUE_PENDING 17 · UNKNOWN(age≥24h) 53</div>
-      <div class="mrow">WIN 2/21 (9.5%)</div>
-      <div class="mrow">BAD 0/21 (0.0%)</div>
-      <div class="mrow">DEAD 0/21 (0.0%) · <i>subset BAD</i></div>
-      <div class="mrow">MEDIAN -0.9% · BEST 1499.1% · WORST -1.0%</div>
+      <div class="mrow">CALLS 91 · MATURED 23 · TRUE_PENDING 17 · UNKNOWN(age≥24h) 51</div>
+      <div class="mrow">WIN 2/23 (8.7%)</div>
+      <div class="mrow">BAD 0/23 (0.0%)</div>
+      <div class="mrow">DEAD 0/23 (0.0%) · <i>subset BAD</i></div>
+      <div class="mrow">MEDIAN -0.8% · BEST 1499.1% · WORST -1.0%</div>
     </div>
     <div class="mlab" style="margin-top:10px">TOP 5 by matured return</div>
     <div class="card"><div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL" target="_blank" rel="noopener noreferrer">App</a> · MEDIUM · SCR 55 · MC $782,943 · <b>+1499.1%</b></div>
@@ -7058,14 +7040,14 @@ a:hover{text-decoration:underline}
 <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump" target="_blank" rel="noopener noreferrer">KEKODYSSEUS</a> · MEDIUM · SCR 56 · MC $410,100 · <b>+0.9%</b></div>
 <div class="mrow"><a class="tok" href="https://gmgn.ai/sol/token/Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump" target="_blank" rel="noopener noreferrer">Jimothy</a> · MEDIUM · SCR 65 · MC $7,208,120 · <b>+0.7%</b></div></div>
     <div class="mlab" style="margin-top:10px">TIER COMPARE (7D)</div>
-    <div class="card"><div class="mrow">MEDIUM: N=88 matured=18 WIN=1 BAD=0 DEAD=0 median=-0.9%</div>
+    <div class="card"><div class="mrow">MEDIUM: N=88 matured=20 WIN=1 BAD=0 DEAD=0 median=-0.9%</div>
 <div class="mrow">HIGH: INSUFFICIENT (matured 3/10)</div></div>
     <div class="mlab" style="margin-top:10px">RESEARCH</div>
     <div class="card">
       <div class="mrow">SNIPER_V1: INSUFFICIENT — prospective cohort empty/immature — historical discovery N=55 shown as DISCOVERY, not validation</div>
     </div>
   </div>
-  <script>window.__spData = {"7D": {"p": "7D", "total": 91, "matured": 21, "pending": 70, "true_pending": 17, "unknown_missing": 53, "win_n": 2, "win_rate": 9.523809523809524, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.91, "best": 1499.09, "worst": -1.0, "md": 21, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}, "30D": {"p": "30D", "total": 91, "matured": 21, "pending": 70, "true_pending": 17, "unknown_missing": 53, "win_n": 2, "win_rate": 9.523809523809524, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.91, "best": 1499.09, "worst": -1.0, "md": 21, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}, "ALL": {"p": "ALL", "total": 91, "matured": 21, "pending": 70, "true_pending": 17, "unknown_missing": 53, "win_n": 2, "win_rate": 9.523809523809524, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.91, "best": 1499.09, "worst": -1.0, "md": 21, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}};</script>
+  <script>window.__spData = {"7D": {"p": "7D", "total": 91, "matured": 23, "pending": 68, "true_pending": 17, "unknown_missing": 51, "win_n": 2, "win_rate": 8.695652173913043, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.82, "best": 1499.09, "worst": -1.0, "md": 23, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}, "30D": {"p": "30D", "total": 91, "matured": 23, "pending": 68, "true_pending": 17, "unknown_missing": 51, "win_n": 2, "win_rate": 8.695652173913043, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.82, "best": 1499.09, "worst": -1.0, "md": 23, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}, "ALL": {"p": "ALL", "total": 91, "matured": 23, "pending": 68, "true_pending": 17, "unknown_missing": 51, "win_n": 2, "win_rate": 8.695652173913043, "bad_n": 0, "bad_rate": 0.0, "dead_n": 0, "dead_rate": 0.0, "median": -0.82, "best": 1499.09, "worst": -1.0, "md": 23, "top": [{"sym": "App", "ca": "49nkLrXi8nCZBVKsShDNasEtPe4Vn1mx9Xbr3kTa8pTL", "tier": "MEDIUM", "score": 55, "ret": 1499.0886142887978, "cls": "WIN", "mc": 782943}, {"sym": "Qenis", "ca": "EkcTa8n14fXcHdfvZqCg72cTCutJnnKb19vcHwKTpump", "tier": "HIGH", "score": 76, "ret": 61.92202641388771, "cls": "WIN", "mc": 2654170}, {"sym": "SAME", "ca": "CU5e2iqWkXKrEHrg6fgoV6uqptEWL9M98oeU4skpump", "tier": "MEDIUM", "score": 72, "ret": 18.40049095314581, "cls": "SURVIVED", "mc": 402474}, {"sym": "KEKODYSSEUS", "ca": "HiY4qx8j5QuVh5UFnKyFq1DvzzDNgFkgyyhEeDXhpump", "tier": "MEDIUM", "score": 56, "ret": 0.9224179698830834, "cls": "SURVIVED", "mc": 410100}, {"sym": "Jimothy", "ca": "Ge87EtsjwRQbHaqQmKRno69RFTwh9bfSsm99XNxTpump", "tier": "MEDIUM", "score": 65, "ret": 0.7407885653922323, "cls": "SURVIVED", "mc": 7208120}]}};</script>
   <script>
   (function(){
     var pills = document.querySelectorAll('#shadow_perf .pill[data-sp]');
