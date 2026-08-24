@@ -56,6 +56,20 @@ a:hover{text-decoration:underline}
 .tab{display:none}
 .tab.active{display:block}
 
+/* whale cards: compact, mobile-safe, symbol is primary click target */
+.whale-card{border:1px solid #eee;border-radius:10px;padding:10px 12px;background:#fafafa;margin-bottom:10px;overflow:hidden;word-break:break-word}
+.wc-top{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.wc-sym{font-weight:700;font-size:15px;color:#1a5fb4;max-width:62%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wc-sym:hover{text-decoration:underline}
+.wc-tag{font-weight:700;font-size:13px;white-space:nowrap;flex-shrink:0}
+.wc-tag .wt{color:#888;font-weight:600;font-size:11px;margin-right:2px}
+.wc-ca{font-size:11px;color:#888;margin-top:4px;font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.wc-row{font-size:13px;color:#444;margin-top:3px}
+.wc-meta{font-size:11px;color:#999;margin-top:4px}
+.wc-tx{color:#3498db}
+.wf{margin-left:6px;color:#155724}
+@media(max-width:400px){.whale-card{padding:9px 10px}.wc-sym{font-size:14px}.wc-tag{font-size:12px}}
+
 @media (prefers-color-scheme: dark){
   html,body{background:#111;color:#e6e6e6}
   .topbar,.hdr,.nav,.tab,.card,.ftr{background:#1c1c1c;border-color:#333}
@@ -72,6 +86,12 @@ a:hover{text-decoration:underline}
   .mlab{color:#b9bec8;font-weight:600}
   .ctag{color:#9aa0ac}
   .empty{color:#9aa0ac}
+  .whale-card{background:#1c1c1c;border-color:#333}
+  .wc-sym{color:#6cb6ff}
+  .wc-ca,.wc-row{color:#cfd3db}
+  .wc-meta{color:#9aa0ac}
+  .wc-tx{color:#4aa3ff}
+  .wf{color:#5dd39e}
 }
 
 /* Script for tab switching */</style>
@@ -81,7 +101,7 @@ a:hover{text-decoration:underline}
 <div class="topbar">
 <header class="hdr">
   <div class="title">MEMECOIN SCAN</div>
-  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 24-08 16:00 WIB &nbsp;·&nbsp; gen 24-08 17:49 WIB &nbsp;·&nbsp; radar 109m lalu</div>
+  <div class="sysline"><span class="dot warn">🟡</span> AGING &nbsp;·&nbsp; 📅 Data as-of: 24-08 16:00 WIB &nbsp;·&nbsp; gen 24-08 17:51 WIB &nbsp;·&nbsp; radar 111m lalu</div>
 </header>
 <nav class="nav" role="navigation" aria-label="Main sections">
 <span class="pill primary active" data-tab="radar">🔥 RADAR</span>
@@ -6845,8 +6865,8 @@ a:hover{text-decoration:underline}
     <div class="card">
       <div class="cname">OUTCOME STATUS</div>
       <div class="crow">Window-available&nbsp;&nbsp;15</div>
-      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;10</div>
-      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;5</div>
+      <div class="crow">Valid-price&nbsp;&nbsp;&nbsp;6</div>
+      <div class="crow">Stale/missing&nbsp;&nbsp;&nbsp;9</div>
       <div class="crow">Confirmed-dead&nbsp;&nbsp;0</div>
       <div class="crow">Pending&nbsp;&nbsp;&nbsp;0</div>
     </div>
@@ -6861,10 +6881,10 @@ a:hover{text-decoration:underline}
     </div>
     <div class="card">
       <div class="cname">🔴 LOSERS</div><div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/6LeCYgva3n6LZUxEDc74CabngyGXDzbGRxi4pqxppump" target="_blank" rel="noopener noreferrer">BULL</a> -1.0%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/5AbfQ5tGU4YT1v5r43v8z9UeKmUZcXvMxGrCfsMXpump" target="_blank" rel="noopener noreferrer">NTP</a> -1.0%</div>
-<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/3kvZYBrBPEySFwQfXZGEvJSeMWRa6BkTS34suBEYpump" target="_blank" rel="noopener noreferrer">Dinger</a> -1.0%</div>
 <div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/DShht9B8wCRe5t3oqdPB77PnjJbKxbYaZyuWpZQjbonk" target="_blank" rel="noopener noreferrer">CONK</a> -0.7%</div>
 <div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/FtateF34Xzawa91bpbVNdX72hZYo9cymRDYqBreHHbJi" target="_blank" rel="noopener noreferrer">PANTS</a> -0.6%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/EjAuFtMEP6LQDgLb11JU9bkcskhFYbgd9Q5NRXJppump" target="_blank" rel="noopener noreferrer">Doge2</a> -0.6%</div>
+<div class='crow'>• <a class="tok" href="https://gmgn.ai/sol/token/CXXpHyiwAzuwwxD9aGJCA3L6gjjJ4wMXoGYYjczKpump" target="_blank" rel="noopener noreferrer">FLOPPY</a> -0.6%</div>
     </div>
   </div>
   <div class="sub" style="margin-top:10px">1H / 4H horizon: collecting (scorecard source hanya 24h). Tidak di-invent.</div>
